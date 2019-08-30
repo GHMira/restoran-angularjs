@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-resource.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/services/jelo.service.js"></script>
+<script type="text/javascript" src="app/services/konobar.service.js"></script>
+<script type="text/javascript" src="app/controllers/general.controller.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stulesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="crudApp" ng-controller="GeneralController">
+	<div class="panel panel-default">
+		<div class="panel-heading">Dodavanje Jela</div>
+		<div class="panel-body">
+			<form class="col-md-4" ng-submit="saveJelo()">
+				<div class="form-group">
+					<label for="nazivJ">Naziv jela:</label> <input type="text"
+						ng-model="jelo.nazivJ" class="form-control" idJela="nazivJ"
+						placeholder="Naziv jela">
+				</div>
+				<div class="form-group">
+					<label for="cenaJ">Cena:</label> <input type="text"
+						ng-model="jelo.cenaJ" class="form-control"
+						idJela="cenaJ" placeholder="Cena">
+				</div>
+
+				<div class="form-group">
+					<label for="kategorijaJ">Kategorija jela:</label> 
+					<input type="text"
+						ng-model="jelo.kategorijaJ" class="form-control"
+						idJela="kategorijaJ" placeholder="Kategorija jela">
+				</div>
+				<div class="form-group">
+					<label for="kolicinaJ">Kolicina jela:</label> 
+					<input type="text"
+						ng-model="jelo.kolicinaJ" class="form-control"
+						idJela="kolicinaJ" placeholder="Kolicina jela">
+				</div>
+
+				<button type="submit" value="Submit"class="blue-button">{{buttonText}}</button>
+				
+			</form>
+
+			<div class="table-responsive col-md-6">
+				<table class="table table-striped">
+					<tr>
+						<th>Naziv jela</th>
+						<th>Cena</th>
+						<th>Kategorija jela</th>
+						<th>Kolicina jela</th>
+						<th></th>
+					</tr>
+					<tr ng-repeat="jelo in jela">
+						<td>{{jelo.nazivJ}}</td>
+						<td>{{jelo.cenaJ}}</td>
+						<td>{{jelo.kategorijaJ}}</td>
+						<td>{{jelo.kolicinaJ}}</td>
+						<td>
+							<button type="button" class="red-button"
+								ng-click="updateJeloInit(jelo)">
+								<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+							</button>
+							<button type="button" class="btn btn-default"
+								ng-click="deleteJelo(jelo)">
+								<span class="glyphicon glyphicon-remove-circle"
+									aria-hidden="true"></span>
+							</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+</div>
+
+</body>
+</html>
