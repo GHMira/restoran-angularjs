@@ -7,6 +7,7 @@ import javax.persistence.EntityExistsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import restoran.model.Porudzbina;
 import restoran.model.StavkaPorudzbine;
 import restoran.repository.StavkaPorudzbineRepository;
 @Service
@@ -37,6 +38,9 @@ public class StavkaPorudzbineService {
 	public void delete(Integer idstavke) {
 		stavkaporudzbineRepository.deleteById(idstavke);
 		
+	}
+	public List<StavkaPorudzbine> getStavkeP(Porudzbina porudzbina) {
+		return stavkaporudzbineRepository.findByPorudzbina(porudzbina);
 	}
 
 }

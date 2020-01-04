@@ -1,8 +1,13 @@
-angular.module('crudApp').factory('jeloServis', jeloServis);
-jeloServis.$inject = [ '$resource', '$injector'];
-function jeloServis($resource, $injector) {
-	
+angular.module('crudApp').factory('jeloServis',
+        [ '$injector','$resource', function jeloServis($injector) {
+        	
 	$http = $injector.get('$http');
+	var prikaziJela=false;
+	var prikaziDnevniMeni=false;
+	var porucen=false;
+	var prikazanaP=false;
+	var saveJ=false;
+	var menjan=false;
 	
 	function getJela() {
 		
@@ -11,14 +16,70 @@ function jeloServis($resource, $injector) {
 				url: 'jelo/j'
 		};
 		
-		$http(request)
+		return $http(request)
 		.then(function(response){
-			console.log("Service: getJela " + response.data);
-		})
-		.catch(function(response){
-			console.log("Error: Service-getJela " + response.data);
-		})
-		.finally();
+			console.log("Service: getjela ");
+			return response.data;
+		});
+	}
+	function prikaziDnevniM(datumdm) {
+		console.log(datumdm);
+		var data = {
+				datumdm:datumdm
+		}
+		
+		var request = {
+			method: 'GET',
+			url: 'jelo/jdm',
+			params: data
+		};
+		return $http(request)
+		.then(function(response){
+			console.log("Service: prikaziDnevniMeni ");
+			return response.data;
+		});
+	}
+	function porucivanje(idkonobara){
+		//console.log(idkonobar);
+//		var data = {
+//				idkonobara:idkonobar
+//		}
+		
+		var request = {
+			method: 'POST',
+			url: 'porudzbina/psave/' + idkonobara
+		};
+		return $http(request)
+		.then(function(response){
+			console.log("Service: prikaziDnevniMeni ");
+			return response.data;
+		});
+		
+	}
+	function kreirajStavku(idPorudzbine, idJela){
+		
+		var request = {
+			method: 'POST',
+			url: 'sp/spsave/' + idPorudzbine + '/' + idJela
+		};
+		return $http(request)
+		.then(function(response){
+			console.log("Service: saveStavka ");
+			return response.data;
+		});
+	}
+	function prikaziP(idPorudzbine){
+		console.log(idPorudzbine);
+		var request = {
+				method: 'POST',
+				url: 'sp/spp/'+idPorudzbine +'/'
+			};
+			return $http(request)
+			.then(function(response){
+				console.log("Service: getStavkePor ");
+				return response.data;
+			});
+		
 	}
 	
 	function saveJelo(jelo) {
@@ -114,11 +175,49 @@ function jeloServis($resource, $injector) {
 		
 	}
 	
+	function prikaziJela(){
+		console.log("Service: prikaziJela");
+		
+		var data = {
+				idJela: jelo.idJela,
+				nazivJ:jelo.nazivJ,
+				kategorijaJ: jelo.kategorijaJ,
+				kolicinaJ: jelo.kolicinaJ,
+				cenaJ: jelo.cenaJ
+				
+		}
+		var request = {
+				method: 'PUT',
+				url: 'jelo/j',
+				data:JSON.stringify(data)
+		};
+		
+		$http(request)
+		.then(function(response){
+			console.log("Service: prikaziJela " + response.data);
+		})
+		.catch(function(response){
+			console.log("Error: Service-prikaziJela " + response.data);
+		})
+		.finally();
+		
+	}
+	
 	return  {
-		'save' : saveJelo,
+		'saveJelo' : saveJelo,
 		'getJela': getJela,
 		'updateJelo':updateJelo,
 		'deleteJelo':deleteJelo,
-		'getJelo':getJelo
+		'getJelo':getJelo,
+		'prikaziDnevniM':prikaziDnevniM,
+		'porucivanje':porucivanje,
+		'kreirajStavku':kreirajStavku,
+		'prikaziP':prikaziP,
+		prikaziJela:false,
+		prikaziDnevniMeni:false,
+		porucen:false,
+		prikazanaP: false,
+		saveJ:false,
+		menjan:false
 	};
-}
+    	}]);

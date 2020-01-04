@@ -2,15 +2,23 @@ angular.module('crudApp').factory('konobarServis',
         [ '$injector','$resource', function konobarServis($injector) {
 
 		$http = $injector.get('$http');
-
+		var ulogovan = false;
+		var prikazanA= false;
+		var brisan=false;
+		var podKon=false;
+		var naplacen=false;
 		
-		function logovanje(konobar){
+		// $konobarService.ulogovan nije vidljiv na ovom mestu
+		// a mora da se promeni vrednost te promenljive u then delu programa (ako je rest poziv bio uspesan)
+		// da bi mogli da promenimo 
+		function logovanje(username, password){
 			console.log("Service: logKonobar");
 	
 			var httpParams = {
-					username:'user1',
-					password:'pass1'
+					username:username,
+					password:password,
 			}
+			
 			var request = {
 					method: 'GET',
 					url: 'konobar/klog',
@@ -21,10 +29,11 @@ angular.module('crudApp').factory('konobarServis',
 			.then(function(response){
 				console.log("Service: logovanje " + response.data);
 			})
-			.catch(function(response){
-				console.log("Error: Service-logovanje " + response.data);
-			})
-			.finally();
+//			.catch(function(response){
+//				console.log("Error: Service-logovanje " + response.data);
+//				throw "Pogresan pin!";
+//			})
+//			.finally();
 		}
 		
 		
@@ -34,23 +43,19 @@ angular.module('crudApp').factory('konobarServis',
 					url: 'konobar/k'
 			};
 			
-			$http(request)
+			return $http(request)
 			.then(function(response){
-				console.log("Service: getKonobari " + response.data);
-			})
-			.catch(function(response){
-				console.log("Error: Service-getKonobari " + response.data);
-			})
-			.finally();
+				console.log("Service: getKonobari ");
+				return response.data;
+			});
 		}
 		
 		function saveKonobar(konobar) {
 			console.log("Service: saveKonobar");
 	
 			var data = {
-					idkonobara:konobar.idkonobara,
-					pass:konobar.pass,
-					username:konobar.username
+					username:konobar.username,
+					pass:konobar.pass
 			}
 			
 			var request = {
@@ -91,6 +96,54 @@ angular.module('crudApp').factory('konobarServis',
 			})
 			.finally();
 		}
+		function prikaziAzuriranje(){
+			console.log("Service: prikaziAzuriranjeK");
+			
+			var data = {
+					idkonobara:konobar.idkonobara,
+					pass:konobar.pass,
+					username:konobar.username
+			}
+			var request = {
+					method: 'PUT',
+					url: 'konobar/kazuriranje',
+					data:JSON.stringify(data)
+			};
+			
+			$http(request)
+			.then(function(response){
+				console.log("Service: prikaziAzuriranjeK " + response.data);
+			})
+			.catch(function(response){
+				console.log("Error: Service-prikaziAzuriranjeKonobar " + response.data);
+			})
+			.finally();
+			
+		}
+		function brisanjeK(){
+			console.log("Service: brisanjeK");
+			
+			var data = {
+					idkonobara:konobar.idkonobara,
+					pass:konobar.pass,
+					username:konobar.username
+			}
+			var request = {
+					method: 'POST',
+					url: 'konobar/kbrisanje',
+					data:JSON.stringify(data)
+			};
+			
+			$http(request)
+			.then(function(response){
+				console.log("Service: prikaziAzuriranjeK " + response.data);
+			})
+			.catch(function(response){
+				console.log("Error: Service-prikaziAzuriranjeKonobar " + response.data);
+			})
+			.finally();
+			
+		}
 		function deleteKonobar(idKonobara){
 			console.log("Service: deleteKonobar");
 	
@@ -112,7 +165,7 @@ angular.module('crudApp').factory('konobarServis',
 			})
 			.finally();
 		}
-		function naplata(idPorudzbine){
+		function naplati(idPorudzbine){
 			console.log("Service: naplata");
 	
 			var httpParams = {
@@ -135,12 +188,34 @@ angular.module('crudApp').factory('konobarServis',
 			
 		}
 		
+		function getAllP(){
+			console.log("Service: getAllPorudzbine");
+	
+			var request = {
+					method: 'GET',
+					url: 'porudzbina/p'
+			};
+			
+			return $http(request)
+			.then(function(response){
+				console.log("Service: getAllPorudzbine ");
+				return response.data;
+			});
+			
+		}
+		
 		return  {
 			'logovanje':logovanje,
 			'saveKonobar' : saveKonobar,
 			'getKonobari': getKonobari,
 			'updateKonobar':updateKonobar,
 			'deleteKonobar':deleteKonobar,
-			'naplata':naplata
+			'naplati':naplati,
+			'getAllP': getAllP,
+			ulogovan: false,
+			prikazanA: false,
+			brisan: false,
+			podKon: false,
+			naplacen: false
 		};
 	}]);

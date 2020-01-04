@@ -1,12 +1,16 @@
 package restoran.rest;
 
 import java.net.URISyntaxException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import restoran.model.Jelo;
+import restoran.model.Konobar;
 import restoran.service.JeloService;
 
 @RestController
@@ -23,9 +28,10 @@ public class JeloResource {
 	@Autowired
 	private JeloService jeloService;
 	
-	@RequestMapping(value="j", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="j")
 	public List<Jelo>getAllJela(){
-		return jeloService.findAll();
+		List<Jelo> result = jeloService.findAll();
+		return result;
 	}
 	
 	@RequestMapping(value="jsave", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
@@ -38,7 +44,7 @@ public class JeloResource {
 			return new ResponseEntity<Jelo>(HttpStatus.CONFLICT);
 		}
 	}
-	@RequestMapping(value="jupdate", method=RequestMethod.PUT, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="jupdate", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Jelo> updateJelo(@RequestBody Jelo jelo)throws URISyntaxException{
 		if(jelo.getIdJela()==0) {
 			return new ResponseEntity<Jelo>(HttpStatus.NOT_FOUND);
@@ -61,6 +67,13 @@ public class JeloResource {
 		jeloService.findOne(idJela);
 		return ResponseEntity.ok().build();
 		
+	}
+	@RequestMapping(value="jdm", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Jelo>prikaziDnevniM(@RequestParam(value="datumdm") String datumdm)throws ParseException{
+	    Date date1=new SimpleDateFormat("yyyy-mm-dd").parse(datumdm);  
+
+		List<Jelo> listaJelaNaDnevnomM = jeloService.prikaziDnevniM(date1);
+		return listaJelaNaDnevnomM;
 	}
 	
 }

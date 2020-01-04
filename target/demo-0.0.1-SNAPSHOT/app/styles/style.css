@@ -1,0 +1,148 @@
+.list-group {
+	//max-width: 15.666667%;
+	position:fixed;s
+}
+
+a:not([href]):not([tabindex]) {
+	font-size: 30pt;
+}
+
+
+.list-group-item.disabled, .list-group-item:disabled {
+    color: #6c757d;
+    pointer-events: none;
+}
+
+.list-group-item-primary {
+    background-color: #b8daff !important;
+    height:60px;
+}
+
+.list-group-item-secondary {
+    background-color: #d6d8db !important;
+     height:60px;
+}
+
+.list-group-item-dark {
+    background-color: #c6c8ca !important;
+     height:60px;
+}
+
+.list-group-item-success {
+    background-color: #c3e6cb !important;
+     height:60px;
+     
+}
+
+.list-group-item-danger {
+    background-color: #f5c6cb !important;
+     height:60px;
+}
+
+.list-group-item-warning {
+    background-color: #ffeeba !important;
+     height:60px;
+}
+
+.list-group-item-info {
+    background-color: #bee5eb !important;
+     height:60px;
+}
+
+.list-group-item-light {
+    background-color: #fdfdfe !important;
+     height:60px;
+}
+
+ul li.nav-item {
+    list-style-type: none;
+    padding: 0px 10px;
+    background-color: #f7edf7;
+    text-align: right;
+    display: table-cell;
+    width: 1px;
+}
+
+ul.navbar-nav.ng-scope {
+    text-align: right;
+    float: right;
+    width: 100%;
+    display: table;
+}
+
+
+.table {
+    width: 25%;
+    margin-bottom: 1rem;
+    color: #212529;
+    align-self: center;
+    margin-left: 20em;
+    position: fixed;
+}
+
+.tableJ {
+    width: 40%;
+    margin-bottom: 1rem;
+    color: #212529;
+    align-self: center;
+    margin-left: 30em;
+    position: fixed;
+}
+.konobar{
+	position: relative;
+    left: 50%;
+}
+.searchObjResults {
+    margin-left: 100px;
+}
+.form-inline.my-2.my-lg-0.ng-pristine.ng-valid.ng-scope {
+    margin-left: 320px;
+}
+.dnevni-meniPregled.ng-pristine.ng-valid.ng-scope {
+    margin-left: 300px
+}
+
+button.btn.btn-outline-success.my-2.my-sm {
+    width: 250px;
+    height: 30px;
+}
+.Porucivanje {
+    margin-left: 300px;
+}
+table#searchObjResults {
+    margin-left: 400px;
+}
+#por {
+    margin-left: 800px;
+    width: 140px;
+    height: 40px;
+}
+table#searchObjResults1 {
+    margin-left: 350px;
+}
+input#izn {
+    margin-left: 900px;
+    width: 140px;
+    height: 40px;
+}
+button#iznos {
+    margin-left: 900px;
+}
+.naplatiR.ng-scope {
+    margin-left: 400px;
+}
+.UpisNJ.ng-scope {
+    margin-left: 500px;
+}
+.IzmenaJ.ng-scope {
+   width: 25%;
+    margin-bottom: 1rem;
+    color: #212529;
+    align-self: center;
+    margin-left: 20em;
+    position: fixed;
+}
+.MJela.ng-scope {
+	position: relative;
+    left: 60%;
+}

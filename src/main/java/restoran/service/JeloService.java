@@ -1,5 +1,6 @@
 package restoran.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -8,7 +9,9 @@ import javax.persistence.EntityExistsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import restoran.model.Dnevnimeni;
 import restoran.model.Jelo;
+import restoran.repository.DnevnimeniRepository;
 import restoran.repository.JeloRepository;
 
 @Service
@@ -16,7 +19,8 @@ public class JeloService {
 	
 	@Autowired
 	private JeloRepository jeloRepository;
-	
+	@Autowired
+	private DnevnimeniRepository dnevnimeniRepository;
 	
 	public JeloService() {
 	}
@@ -38,12 +42,17 @@ public class JeloService {
 		return jeloRepository.findAll();
 	}
 	
-	public Optional<Jelo> findOne(Integer idJela) {
-		return jeloRepository.findById(idJela);
+	public Jelo findOne(Integer idJela) {
+		return jeloRepository.findById(idJela.intValue());
 	}
 	
 	public void delete(Integer idJela) {
 		jeloRepository.deleteById(idJela);
+	}
+	
+	public List<Jelo> prikaziDnevniM(Date date) {
+		Dnevnimeni dm = dnevnimeniRepository.findByDatumdm(date);
+		return dm.getJelos();
 	}
 	
 }

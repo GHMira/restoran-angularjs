@@ -2,6 +2,9 @@ package restoran.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -21,9 +24,6 @@ public class Jelo implements Serializable {
 
 	private BigDecimal cenaj;
 
-	@Column(name="id_jela")
-	private int idJela;
-
 	private String kategorijaj;
 
 	private BigDecimal kolicinaj;
@@ -31,6 +31,7 @@ public class Jelo implements Serializable {
 	private String nazivj;
 
 	//bi-directional many-to-many association to Dnevnimeni
+	@JsonIgnore
 	@ManyToMany
 	@JoinTable(
 		name="jelamenia"
@@ -45,6 +46,7 @@ public class Jelo implements Serializable {
 
 	//bi-directional many-to-one association to Stavkaporudzbine
 	@OneToMany(mappedBy="jelo")
+	@JsonIgnore
 	private List<StavkaPorudzbine> stavkaporudzbines;
 
 	public Jelo() {
@@ -67,11 +69,11 @@ public class Jelo implements Serializable {
 	}
 
 	public int getIdJela() {
-		return this.idJela;
+		return this.idjela;
 	}
 
 	public void setIdJela(int idJela) {
-		this.idJela = idJela;
+		this.idjela = idJela;
 	}
 
 	public String getKategorijaj() {

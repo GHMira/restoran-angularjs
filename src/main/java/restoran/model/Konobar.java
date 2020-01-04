@@ -2,6 +2,9 @@ package restoran.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 
@@ -23,6 +26,7 @@ public class Konobar implements Serializable {
 	private String username;
 
 	//bi-directional many-to-one association to Porudzbina
+	@JsonIgnore
 	@OneToMany(mappedBy="konobar")
 	private List<Porudzbina> porudzbinas;
 
