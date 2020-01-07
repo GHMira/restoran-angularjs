@@ -1,5 +1,6 @@
 package restoran.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import restoran.repository.DnevnimeniRepository;
 @Service
 public class DnevnimeniService {
 	@Autowired
-	private static DnevnimeniRepository dnevnimeniRepository;
+	private DnevnimeniRepository dnevnimeniRepository;
 	
 	
 	public DnevnimeniService() {
@@ -24,8 +25,12 @@ public class DnevnimeniService {
 		return dnevnimeniRepository.findAll();
 		
 	}
-	public Optional<Dnevnimeni> findOneDM(Integer iddm) {
+	public Dnevnimeni findOneDM(int iddm) {
 		return dnevnimeniRepository.findById(iddm);
+		
+	}
+	public Dnevnimeni  findByDatumdm(Date datumdm) {
+		return dnevnimeniRepository.findByDatumdm(datumdm);
 		
 	}
 
@@ -37,8 +42,8 @@ public class DnevnimeniService {
 		
 	}
 
-	public static Dnevnimeni updateDM(Dnevnimeni dnevnimeni) {
-		if(dnevnimeni.getIddm()!=0 &&  dnevnimeniRepository.existsById(dnevnimeni.getIddm())) {
+	public Dnevnimeni updateDM(Dnevnimeni dnevnimeni) {
+		if(dnevnimeni.getIddm()==0) {
 			throw new EntityExistsException(" Nesto je poslo naopako");
 		}
 		return dnevnimeniRepository.save(dnevnimeni);
@@ -59,7 +64,7 @@ public class DnevnimeniService {
 		}
 		
 		dm.setJelos(jela);
-		Dnevnimeni result = DnevnimeniService.updateDM(dm);
+		Dnevnimeni result = updateDM(dm);
 		
 		if( result == null) {
 			return false;

@@ -104,7 +104,7 @@ public class KonobarResource {
 		}
 	}
 	@RequestMapping(value="kdel", method=RequestMethod.DELETE, produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Void> deleteKonobar(@RequestParam Integer idkonobara){
+	public ResponseEntity<Void> deleteKonobar(@RequestParam("idkonobara") int idkonobara){
 		konobarService.delete(idkonobara);
 		return ResponseEntity.ok().build();
 	}

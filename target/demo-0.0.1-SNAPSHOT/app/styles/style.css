@@ -146,3 +146,32 @@ button#iznos {
 	position: relative;
     left: 60%;
 }
+.AzuriranjeDM.ng-scope {
+    margin-left: 350px;
+}
+button.menjajDo {
+    margin-left: 500px;
+    color: black;
+    background-color: azure;
+}
+.KreirajDM.ng-scope {
+    margin-left: 400px;
+}
+label {
+    font-size: large;
+    font-style: oblique;
+}
+label {
+    font-weight: 500;
+}
+button.createDM {
+    background-color: coral;
+    width: 300px;
+    height: 60px;
+}
+
+label {
+    font-size: larger;
+    font-style: oblique;
+    margin-left: 120px;
+}

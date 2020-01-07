@@ -68,12 +68,15 @@ public class JeloResource {
 		return ResponseEntity.ok().build();
 		
 	}
+	
 	@RequestMapping(value="jdm", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public List<Jelo>prikaziDnevniM(@RequestParam(value="datumdm") String datumdm)throws ParseException{
-	    Date date1=new SimpleDateFormat("yyyy-mm-dd").parse(datumdm);  
+		Date date1=new SimpleDateFormat("yyyy-mm-dd").parse(datumdm);
 
 		List<Jelo> listaJelaNaDnevnomM = jeloService.prikaziDnevniM(date1);
 		return listaJelaNaDnevnomM;
 	}
+
+	
 	
 }

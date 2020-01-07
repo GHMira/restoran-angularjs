@@ -132,7 +132,7 @@ button#iznos {
     margin-left: 400px;
 }
 .UpisNJ.ng-scope {
-    margin-left: 500px;
+    margin-left: 250px;
 }
 .IzmenaJ.ng-scope {
    width: 25%;
@@ -144,5 +144,43 @@ button#iznos {
 }
 .MJela.ng-scope {
 	position: relative;
-    left: 60%;
+    left: 45%;
+}
+.AzuriranjeDM.ng-scope {
+    margin-left: 350px;
+}
+button.menjajDo {
+    margin-left: 500px;
+    color: black;
+    background-color: azure;
+}
+.KreirajDM.ng-scope {
+    margin-left: 400px;
+}
+label {
+    font-size: large;
+    font-style: oblique;
+}
+label {
+    font-weight: 500;
+}
+button.createDM {
+    background-color: coral;
+    width: 300px;
+    height: 60px;
+}
+
+label {
+    font-size: larger;
+    font-style: oblique;
+    margin-left: 120px;
+}
+form.form-inline.my-2.my-lg-0.ng-valid.ng-scope.ng-dirty.ng-valid-parse {
+    margin-left: 200px;
+}
+button#sacuvaj {
+    margin-left: 120px;
+}
+table#searchObjResultsDM {
+    margin-left: 120px;
 }

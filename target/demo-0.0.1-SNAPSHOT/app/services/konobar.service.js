@@ -120,28 +120,24 @@ angular.module('crudApp').factory('konobarServis',
 			.finally();
 			
 		}
-		function brisanjeK(){
+		function brisanjeK(idkonobara){
 			console.log("Service: brisanjeK");
 			
 			var data = {
-					idkonobara:konobar.idkonobara,
-					pass:konobar.pass,
-					username:konobar.username
+					idkonobara:idkonobara
+					
 			}
 			var request = {
-					method: 'POST',
+					method: 'DELETE',
 					url: 'konobar/kbrisanje',
-					data:JSON.stringify(data)
+					params:data
 			};
 			
-			$http(request)
+			return $http(request)
 			.then(function(response){
-				console.log("Service: prikaziAzuriranjeK " + response.data);
-			})
-			.catch(function(response){
-				console.log("Error: Service-prikaziAzuriranjeKonobar " + response.data);
-			})
-			.finally();
+				console.log("Service: brisanjeK ");
+				return response.data;
+			});
 			
 		}
 		function deleteKonobar(idKonobara){
@@ -209,7 +205,8 @@ angular.module('crudApp').factory('konobarServis',
 			'saveKonobar' : saveKonobar,
 			'getKonobari': getKonobari,
 			'updateKonobar':updateKonobar,
-			'deleteKonobar':deleteKonobar,
+			
+			'brisanjeK':brisanjeK,
 			'naplati':naplati,
 			'getAllP': getAllP,
 			ulogovan: false,

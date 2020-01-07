@@ -8,6 +8,9 @@ angular.module('crudApp').factory('jeloServis',
 	var prikazanaP=false;
 	var saveJ=false;
 	var menjan=false;
+	var aDM=false;
+	var cdm=false;
+	var oobrisan;
 	
 	function getJela() {
 		
@@ -19,6 +22,23 @@ angular.module('crudApp').factory('jeloServis',
 		return $http(request)
 		.then(function(response){
 			console.log("Service: getjela ");
+			return response.data;
+		});
+	}
+	function getOneDM(datumdm){
+		console.log(datumdm);
+		var data = {
+				datumdm:datumdm
+		}
+		
+		var request = {
+			method: 'GET',
+			url: 'dm/dmfindOne',
+			params: data
+		};
+		return $http(request)
+		.then(function(response){
+			console.log("Service: prikaziDnevniMeni ");
 			return response.data;
 		});
 	}
@@ -36,6 +56,29 @@ angular.module('crudApp').factory('jeloServis',
 		return $http(request)
 		.then(function(response){
 			console.log("Service: prikaziDnevniMeni ");
+			return response.data;
+		});
+	}
+	function updateDnevniMeni(iddm){
+		console.log("Service: updateDnevniMeni");
+		
+		var today = new Date();
+		var datumdm = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		
+		var data = {
+				iddm: iddm,
+				datumdm: datumdm
+				
+		}
+		var request = {
+				method: 'GET',
+				url: 'dm/dmupdate',
+				params:data
+		};
+		
+		return $http(request)
+		.then(function(response){
+			console.log("Service: updateDnevniMeni " + response.data);
 			return response.data;
 		});
 	}
@@ -202,6 +245,44 @@ angular.module('crudApp').factory('jeloServis',
 		.finally();
 		
 	}
+	function setDM(idjela){
+		var today = new Date();
+		var datumdm = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		var data = {datumdm:datumdm,
+				jelos: idjela
+				
+				
+		}
+		var request = {
+				method: 'GET',
+				url: 'dm/dmsave' ,
+				params:data
+			};
+			return $http(request)
+			.then(function(response){
+				console.log("Service: setDM ");
+				return response.data;
+			});
+		
+	}
+	function brisanjeJ(idjela){
+		console.log("Service: brisanjeJ");
+		
+		var data = {		
+				idJela: idjela
+		}
+		var request = {
+				method: 'DELETE',
+				url: 'jelo/jdel',
+				params:data
+		};
+		
+		return $http(request)
+		.then(function(response){
+			console.log("Service: prikaziAzuriranjeJ " + response.data);
+			return response.data;
+		});
+	}
 	
 	return  {
 		'saveJelo' : saveJelo,
@@ -213,11 +294,18 @@ angular.module('crudApp').factory('jeloServis',
 		'porucivanje':porucivanje,
 		'kreirajStavku':kreirajStavku,
 		'prikaziP':prikaziP,
+		 'getOneDM':getOneDM,
+		 'updateDnevniMeni':updateDnevniMeni,
+		 'setDM':setDM,
+		'brisanjeJ':brisanjeJ,
 		prikaziJela:false,
 		prikaziDnevniMeni:false,
 		porucen:false,
 		prikazanaP: false,
 		saveJ:false,
-		menjan:false
+		menjan:false,
+		aDM:false,
+		cdm:false,
+		obrisan:false
 	};
     	}]);
