@@ -1,11 +1,18 @@
 package restoran.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import java.util.List;
 
 
 /**
@@ -27,7 +34,7 @@ public class Konobar implements Serializable {
 
 	//bi-directional many-to-one association to Porudzbina
 	@JsonIgnore
-	@OneToMany(mappedBy="konobar")
+	@OneToMany(mappedBy="konobar", cascade= {CascadeType.PERSIST, CascadeType.REMOVE}, fetch=FetchType.EAGER)
 	private List<Porudzbina> porudzbinas;
 
 	public Konobar() {

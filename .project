@@ -3,6 +3,7 @@
 	<name>RestoranWebAngularjs</name>
 	<comment></comment>
 	<projects>
+		<project>r</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -27,6 +28,7 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>org.eclipse.sirius.nature.modelingproject</nature>
 		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
 		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>

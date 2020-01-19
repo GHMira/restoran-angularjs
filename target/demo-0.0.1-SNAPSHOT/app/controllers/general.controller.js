@@ -104,7 +104,7 @@ function GeneralController($scope, jeloServis, konobarServis){
 	}
 		  // HTTP DELETE- delete country by Id
         $scope.deleteKonobar = function (k) {
-        	var idkonobara = $('*[name="brisanjeK"]').val();
+        	var idkonobara = $('*[name="BrisanjeK"]').val();
     		$scope.konobarServis.brisanjeK(idkonobara).then(function(value) {
     			
     		});
@@ -229,6 +229,7 @@ function GeneralController($scope, jeloServis, konobarServis){
 	}
 	
 	$scope.myfuncIznos=function myfuncIznos(){
+		$scope.iznos=0;
 		for(var i=0;i<$scope.jela.length;i++){
 			console.log($scope.jela[i].cenaj);
 			$scope.iznos += $scope.jela[i].cenaj;
@@ -253,6 +254,7 @@ function GeneralController($scope, jeloServis, konobarServis){
 				$scope.prikaziP();
 	
 			});
+			$scope.idPorudzbine = undefined;
 		} else {
 			var valueList = [];
 			$('#porudzbina1').each(function() {
@@ -357,6 +359,15 @@ function GeneralController($scope, jeloServis, konobarServis){
 		$scope.jeloServis.obrisan=false;
 	}
 	$scope.naplati=function naplati(){
+		$scope.jela = [];
+		$scope.jeloServis.getJela().then(function(value) {
+			  $scope.jela = value;// smestanje jela vracenih iz baze u niz
+									// $scope.jela
+		});
+		$scope.porudzbine=[];
+		$scope.konobarServis.getAllP().then(function(value){
+			$scope.porudzbine=value;
+		});
 		$scope.jeloServis.prikazanaP = false;
 		$scope.konobarServis.ulogovan = true;
 		$scope.jeloServis.porucen=false;
@@ -475,6 +486,11 @@ function GeneralController($scope, jeloServis, konobarServis){
 		$scope.jeloServis.obrisan=false;
 	}
 	$scope.menjanjeJ=function menjanjeJ(){
+		$scope.jela = [];
+		$scope.jeloServis.getJela().then(function(value) {
+			  $scope.jela = value;// smestanje jela vracenih iz baze u niz
+									// $scope.jela
+		})
 		$scope.jeloServis.prikazanaP = false;
 		$scope.konobarServis.ulogovan = true;
 		$scope.jeloServis.porucen=false;
@@ -491,6 +507,11 @@ function GeneralController($scope, jeloServis, konobarServis){
 		$scope.jeloServis.obrisan=false;
 	}
 	$scope.aDM=function aDM(){
+		$scope.jela = [];
+		$scope.jeloServis.getJela().then(function(value) {
+			  $scope.jela = value;// smestanje jela vracenih iz baze u niz
+									// $scope.jela
+		})
 		$scope.jeloServis.prikazanaP = false;
 		$scope.konobarServis.ulogovan = true;
 		$scope.jeloServis.porucen=false;
@@ -507,6 +528,11 @@ function GeneralController($scope, jeloServis, konobarServis){
 		$scope.jeloServis.obrisan=false;
 	}
 	$scope.cDM=function cDM(){
+		$scope.jela = [];
+		$scope.jeloServis.getJela().then(function(value) {
+			  $scope.jela = value;// smestanje jela vracenih iz baze u niz
+									// $scope.jela
+		});
 		$scope.jeloServis.prikazanaP = false;
 		$scope.konobarServis.ulogovan = true;
 		$scope.jeloServis.porucen=false;
@@ -523,6 +549,11 @@ function GeneralController($scope, jeloServis, konobarServis){
 		$scope.jeloServis.obrisan=false;
 	}
 	$scope.brisanjeJ=function brisanjeJ(){
+		$scope.jela = [];
+		$scope.jeloServis.getJela().then(function(value) {
+			  $scope.jela = value;// smestanje jela vracenih iz baze u niz
+									// $scope.jela
+		});
 		$scope.jeloServis.prikazanaP = false;
 		$scope.konobarServis.ulogovan = true;
 		$scope.jeloServis.porucen=false;

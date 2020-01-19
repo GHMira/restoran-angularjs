@@ -67,23 +67,6 @@
 
 
 	</nav>
-	<div class="input-group mb-3">
-		<div class="input-group-prepend">
-			<button class="btn btn-outline-secondary dropdown-toggle"
-				type="button" data-toggle="dropdown" aria-haspopup="true"
-				aria-expanded="false">Dropdown</button>
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#" ng-repeat="e in test">{{e}}</a>
-				<!-- <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a> -->
-				<div role="separator" class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Separated link</a>
-			</div>
-		</div>
-		<input type="text" class="form-control"
-			aria-label="Text input with dropdown button">
-	</div>
 
 	<ul class="list-group ">
 
@@ -94,7 +77,7 @@
 			ng-click="prikaziJela()"> Pronalazenje odredjenog jela</a></li>
 			<li class="list-group-item list-group-item-danger"><a href="#"
 			class="list-group-item list-group-item-danger list-group-item-action"
-			ng-click="saveJelo()">Upis novog jela u jelovnik</a></li>
+			ng-click="saveJelo()">Unos novog jela u jelovnik</a></li>
 		<li class="list-group-item list-group-item-warning"><a href="#"
 			class="list-group-item list-group-item-warning list-group-item-action"
 			ng-click="menjanjeJ()">Izmena podataka o jelu</a></li>
@@ -168,7 +151,7 @@
 	
 
 
-	<div class="konobar" ng-if="konobari && konobarServis.brisan">
+	<div class="konobar" ng-if="konobari && konobarServis.brisan ">
 		<label>Unesite id konobara kojeg zelite da brisete iz
 			evidencije:</label><br> 
 			<input type="text" name="BrisanjeK" value=""
@@ -189,8 +172,7 @@
 	</div>
 	<form class="form-inline my-2 my-lg-0"  ng-if="jela && jeloServis.prikaziJela ">
 	
-	<label>Bilo koja rec: <input ng-model="search.$jelo" type="search" placeholder="Search" aria-label="Search"></label><br>
-	<br>
+	
 	<label>Samo naziv: <input ng-model="search.nazivj" type="search" placeholder="Search" aria-label="Search"></label><br>
 	<br>
 	<label>Samo kategorija: <input ng-model="search.kategorijaj" type="search" placeholder="Search" aria-label="Search"></label><br>
@@ -221,7 +203,7 @@
 		<input type="date"name="datum"placeholder="YYYY-MM-DD">
 		<button class="btn btn-outline-success my- my-sm" ng-click="findAll()" type="submit" name="dat">Prikazi dnevni meni</button> 
 		
-		<table id="searchObjResults">
+		<table id="searchObjResultsDM">
 		<tr><th>Id dnevnog menia</th>	
 			<th>Id jela</th>
 			<th>Naziv Jela</th>
@@ -244,7 +226,7 @@
 	<form class="porucivanje" ng-if="jela && jeloServis.porucen  " >
 	<div class="Porucivanje">
 		<label>Unesite datum za koji zelite uvid u dnevni meni</label>
-		<input type="date"name="datum"placeholder="YYYY-MM-DD">
+		<input type="date"name="datum"placeholder="YYYY-MM-DD"><br>
 		<label>Unesite id konobara</label>
 		<input type="text"name="idkonobar">
 		
@@ -336,7 +318,7 @@
 	<div class="UpisNJ" ng-if="jela && jeloServis.saveJ ">
 		<label>Unesite naziv jela:</label>
 		<input type="text" name="nazivj"><br> 
-		<label>Unesite kategoriju jela: (glavno jelo, salata, predjelo, desert, pice)</label><br>
+		<label>Unesite kategoriju jela: (glavno jelo, salata, predjelo, desert, pice)</label>
 		<input type="text" name="kategorijaj"><br>
 		
 		<label>Unesite kolicinu jela u g:</label>
@@ -344,7 +326,7 @@
 		<label>Unesite cenu jela u g:</label>
 		<input type="text" name="cenaj"><br>
 		
-		<button type="submit" id="potvrdi" value="potvrdi" ng-click="upisNJ()">Potvrdi</button>
+		<button type="submit" id="potvrdi" value="potvrdi" ng-click="upisNJ()" style="margin-left: 120px;">Potvrdi</button>
 		
 	</div>
 		

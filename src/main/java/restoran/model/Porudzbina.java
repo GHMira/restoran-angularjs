@@ -29,7 +29,7 @@ public class Porudzbina implements Serializable {
 	private BigDecimal iznos;
 
 	//bi-directional many-to-one association to Konobar
-	@ManyToOne
+	@ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.REMOVE}, fetch=FetchType.EAGER)
 	@JoinColumn(name="IDKONOBARA")
 	private Konobar konobar;
 

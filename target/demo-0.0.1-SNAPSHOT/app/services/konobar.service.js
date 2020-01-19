@@ -129,7 +129,7 @@ angular.module('crudApp').factory('konobarServis',
 			}
 			var request = {
 					method: 'DELETE',
-					url: 'konobar/kbrisanje',
+					url: 'konobar/kdel',
 					params:data
 			};
 			
