@@ -3,6 +3,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -16,12 +17,27 @@ import org.springframework.web.bind.annotation.RestController;
 import restoran.model.Konobar;
 import restoran.service.KonobarService;
 
+@SpringBootApplication
 @RestController
+
 @RequestMapping("/konobar")
 public class KonobarResource {
 	
 	@Autowired
 	private KonobarService konobarService;
+	
+//	@Configuration
+//	@Order(SecurityProperties.BASIC_AUTH_ORDER)
+//	protected static class SecurityConfiguration extends WebSecurityConfigurerAdapter{
+//		protected void configure(HttpSecurity http)throws Exception{
+//			http
+//			.httpBasic()
+//			.and()
+//			.authorizeRequests()
+//			.antMatchers("/index.html","/","/home","/login").permitAll()
+//			.anyRequest().authenticated();
+//		}
+//	}
 	
 	@GetMapping("k")
 	public List<Konobar>getAllKonobari(){

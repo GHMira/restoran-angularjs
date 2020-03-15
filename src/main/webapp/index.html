@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="app/styles/style.css">
 </script>
 </head>
+</head>
 <body ng-app="crudApp" ng-controller="GeneralController">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand">RESTORAN</a>
@@ -49,7 +50,8 @@
 				<li class="nav-item"><a class="nav-link list-group-item-action"
 					href="#" ng-click="prikaziAzuriranje()">Azuriranje konobara</a></li>
 				<li class="nav-item"><a class="nav-link list-group-item-action"
-					href="#" style="color: red; font-weight: 900px" ng-click="getP()">NAPLATA RACUNA</a></li>
+					href="#" style="color: red; font-weight: 900px" ng-click="getP()">NAPLATA
+						RACUNA</a></li>
 			</ul>
 
 			<form class="form-inline my-2 my-lg-0"
@@ -75,7 +77,7 @@
 		<li class="list-group-item list-group-item-primary"><a href="#"
 			class="list-group-item list-group-item-primary list-group-item-action"
 			ng-click="prikaziJela()"> Pronalazenje odredjenog jela</a></li>
-			<li class="list-group-item list-group-item-danger"><a href="#"
+		<li class="list-group-item list-group-item-danger"><a href="#"
 			class="list-group-item list-group-item-danger list-group-item-action"
 			ng-click="saveJelo()">Unos novog jela u jelovnik</a></li>
 		<li class="list-group-item list-group-item-warning"><a href="#"
@@ -87,21 +89,21 @@
 		<li class="list-group-item list-group-item-secondary"><a href="#"
 			class="list-group-item list-group-item-secondary list-group-item-action"
 			ng-click="prikaziDnevniMeni()"> Pregled jela dnevnog menia </a></li>
-		
+
 		<li class="list-group-item list-group-item-dark"><a href="#"
 			class="list-group-item list-group-item-dark list-group-item-action"
 			ng-click="porucivanje()"> Porucivanje jela </a></li>
 		<li class="list-group-item list-group-item-success"><a href="#"
 			class="list-group-item list-group-item-success list-group-item-action"
 			ng-click="prikaziStavke()">Prikaz kreirane porudzbine</a></li>
-		
+
 		<li class="list-group-item list-group-item-info"><a href="#"
 			class="list-group-item list-group-item-info list-group-item-action"
 			ng-click="aDM()">Azuriranje dnevnog menia</a></li>
 		<li class="list-group-item list-group-item-light"><a href="#"
 			class="list-group-item list-group-item-light list-group-item-action"
 			ng-click="cDM()">Kreiranje novog dnevnog menia</a></li>
-		
+
 
 	</ul>
 
@@ -109,7 +111,7 @@
 
 
 	<table class="table"
-		ng-if="konobari && konobarServis.podKon && konobarServis.ulogovan">
+		ng-if="konobari && konobarServis.podKon && konobarServis.ulogovan ">
 		<thead class="thead-dark">
 			<tr>
 				<th scope="col">ID</th>
@@ -148,18 +150,16 @@
 		</tbody>
 
 	</table>-->
-	
+
 
 
 	<div class="konobar" ng-if="konobari && konobarServis.brisan ">
 		<label>Unesite id konobara kojeg zelite da brisete iz
-			evidencije:</label><br> 
-			<input type="text" name="BrisanjeK" value=""
-			text-align="right" ; font-size="80%;" /> 
-			<input type="submit" ng-click="deleteKonobar()"
-			name="submit" value="Brisanje" /><br>
+			evidencije:</label><br> <input type="text" name="BrisanjeK" value=""
+			text-align="right" ; font-size="80%;" /> <input type="submit"
+			ng-click="deleteKonobar()" name="submit" value="Brisanje" /><br>
 	</div>
-	<div class="konobar" ng-if="konobari && konobarServis.prikazanA">
+	<div class="konobar" ng-if="konobari  && konobarServis.prikazanA">
 		<label>Unesite id broj konobara za kojeg se azuriraju podaci:</label>
 		<input type="text" name="IdAzur" value="" text-align="right"
 			; font-size="80%;" /><br> <label>Unesite novi username:</label>
@@ -170,284 +170,303 @@
 			ng-click="update()" text-align="right" stile="margin-right:10px"
 			value="submit" />
 	</div>
-	<form class="form-inline my-2 my-lg-0"  ng-if="jela && jeloServis.prikaziJela ">
-	
-	
-	<label>Samo naziv: <input ng-model="search.nazivj" type="search" placeholder="Search" aria-label="Search"></label><br>
-	<br>
-	<label>Samo kategorija: <input ng-model="search.kategorijaj" type="search" placeholder="Search" aria-label="Search"></label><br>
-	<br>
-	<!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	
-	<table id="searchObjResults">
-		<tr>
-			<th>Id jela</th>
-			<th>Naziv Jela</th>
-			<th>Kategorija Jela</th>
-			<th>Kolicina jela</th>
-			<th>Cena jela</th>
-		</tr>
-		<tr ng-repeat="jelo in jela | filter:search:strict">
-			<td>{{jelo.idjela}}</td>
-			<td>{{jelo.nazivj}}</td>
-			<td>{{jelo.kategorijaj}}</td>
-			<td>{{jelo.kolicinaj}}</td>
-			<td>{{jelo.cenaj}}</td>
-		</tr>
-	</table>
-	</form>
-	
-	<form class="dnevni-meniPregled" ng-if="jela && jeloServis.prikaziDnevniMeni  " >
-		<label>Unesite datum za koji zelite uvid u dnevni meni</label>
-		<input type="date"name="datum"placeholder="YYYY-MM-DD">
-		<button class="btn btn-outline-success my- my-sm" ng-click="findAll()" type="submit" name="dat">Prikazi dnevni meni</button> 
-		
-		<table id="searchObjResultsDM">
-		<tr><th>Id dnevnog menia</th>	
-			<th>Id jela</th>
-			<th>Naziv Jela</th>
-			<th>Kategorija Jela</th>
-			<th>Kolicina jela</th>
-			<th>Cena jela</th>
-		</tr>
-		<tr  ng-repeat="jelo in jela | filter:search:strict">
-			<td>{{dnevnimeni.iddm}}</td>
-			<td>{{jelo.idjela}}</td>
-			<td>{{jelo.nazivj}}</td>
-			<td>{{jelo.kategorijaj}}</td>
-			<td>{{jelo.kolicinaj}}</td>
-			<td>{{jelo.cenaj}}</td>
-		</tr>
-	</table>
-	
-	</form>
-	
-	<form class="porucivanje" ng-if="jela && jeloServis.porucen  " >
-	<div class="Porucivanje">
-		<label>Unesite datum za koji zelite uvid u dnevni meni</label>
-		<input type="date"name="datum"placeholder="YYYY-MM-DD"><br>
-		<label>Unesite id konobara</label>
-		<input type="text"name="idkonobar">
-		
-		<button class="btn btn-outline-success my-2 my-sm" ng-click="findAll()" type="submit" name="dat">Prikazi dnevni meni</button> 
-	</div>	
+	<form class="form-inline my-2 my-lg-0"
+		ng-if="jela && jeloServis.prikaziJela ">
+
+
+		<label>Samo naziv: <input ng-model="search.nazivj"
+			type="search" placeholder="Search" aria-label="Search"></label><br>
+		<br> <label>Samo kategorija: <input
+			ng-model="search.kategorijaj" type="search" placeholder="Search"
+			aria-label="Search"></label><br> <br>
+		<!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
 		<table id="searchObjResults">
-		<thead id="poruci">
-		<tr>	
-			<th>Id jela</th>
-			<th>Naziv Jela</th>
-			<th>Kategorija Jela</th>
-			<th>Kolicina jela</th>
-			<th>Cena jela</th>
-			<th>Poruci</th>
-		</tr>
-		</thead>
-		<tbody id="poruci1">
-		<tr  ng-repeat="jelo in jela | filter:search:strict">
-			<td>{{jelo.idjela}}</td>
-			<td>{{jelo.nazivj}}</td>
-			<td>{{jelo.kategorijaj}}</td>
-			<td>{{jelo.kolicinaj}}</td>
-			<td>{{jelo.cenaj}}</td>
-			<td><input type="checkbox" name="check"></td>
-		</tr>
-		</tbody>
-	</table>
-	<button type="submit" id="por" value="Poruci" ng-click="myfunc()">Poruci</button>
-	
+			<tr>
+				<th>Id jela</th>
+				<th>Naziv Jela</th>
+				<th>Kategorija Jela</th>
+				<th>Kolicina jela</th>
+				<th>Cena jela</th>
+			</tr>
+			<tr ng-repeat="jelo in jela | filter:search:strict">
+				<td>{{jelo.idjela}}</td>
+				<td>{{jelo.nazivj}}</td>
+				<td>{{jelo.kategorijaj}}</td>
+				<td>{{jelo.kolicinaj}}</td>
+				<td>{{jelo.cenaj}}</td>
+			</tr>
+		</table>
+	</form>
+
+	<form class="dnevni-meniPregled"
+		ng-if="jela && jeloServis.prikaziDnevniMeni  ">
+		<label>Unesite datum za koji zelite uvid u dnevni meni</label> <input
+			type="date" name="datum" placeholder="YYYY-MM-DD">
+		<button class="btn btn-outline-success my- my-sm" ng-click="findAll()"
+			type="submit" name="dat">Prikazi dnevni meni</button>
+
+		<table id="searchObjResultsDM">
+			<tr>
+				<th>Id dnevnog menia</th>
+				<th>Id jela</th>
+				<th>Naziv Jela</th>
+				<th>Kategorija Jela</th>
+				<th>Kolicina jela</th>
+				<th>Cena jela</th>
+			</tr>
+			<tr ng-repeat="jelo in jela | filter:search:strict">
+				<td>{{dnevnimeni.iddm}}</td>
+				<td>{{jelo.idjela}}</td>
+				<td>{{jelo.nazivj}}</td>
+				<td>{{jelo.kategorijaj}}</td>
+				<td>{{jelo.kolicinaj}}</td>
+				<td>{{jelo.cenaj}}</td>
+			</tr>
+		</table>
+
+	</form>
+
+	<form class="porucivanje" ng-if="jela && jeloServis.porucen  ">
+		<div class="Porucivanje">
+			<label>Unesite datum za koji zelite uvid u dnevni meni</label> <input
+				type="date" name="datum" placeholder="YYYY-MM-DD"><br>
+			<label>Unesite id konobara</label> <input type="text"
+				name="idkonobar">
+
+			<button class="btn btn-outline-success my-2 my-sm"
+				ng-click="findAll()" type="submit" name="dat">Prikazi
+				dnevni meni</button>
+		</div>
+		<table id="searchObjResults">
+			<thead id="poruci">
+				<tr>
+					<th>Id jela</th>
+					<th>Naziv Jela</th>
+					<th>Kategorija Jela</th>
+					<th>Kolicina jela</th>
+					<th>Cena jela</th>
+					<th>Poruci</th>
+				</tr>
+			</thead>
+			<tbody id="poruci1">
+				<tr ng-repeat="jelo in jela | filter:search:strict">
+					<td>{{jelo.idjela}}</td>
+					<td>{{jelo.nazivj}}</td>
+					<td>{{jelo.kategorijaj}}</td>
+					<td>{{jelo.kolicinaj}}</td>
+					<td>{{jelo.cenaj}}</td>
+					<td><input type="checkbox" name="check"></td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="submit" id="por" value="Poruci" ng-click="myfunc()">Poruci</button>
+
 	</form>
 	<div class="prikazP" ng-if="jela && jeloServis.prikazanaP ">
 		<table id="searchObjResults1">
-		<thead id="porudzbina">
-		<tr>	
-			<th>Id stavke</th>
-			<th>Id jela</th>
-			<th>Naziv Jela</th>
-			<th>Kategorija Jela</th>
-			<th>Kolicina jela</th>
-			<th>Cena jela</th>
-			<th>Id porudzbine</th>
-		</tr>
-		</thead>
-		<tbody id="porudzbina1">
-		<tr  ng-repeat="jelo in jela | filter:search:strict">
-			<td>{{jelo.idjela}}</td>
-			<td>{{jelo.nazivj}}</td>
-			<td>{{jelo.kategorijaj}}</td>
-			<td>{{jelo.kolicinaj}}</td>
-			<td>{{jelo.cenaj}}</td>
-			<td>idPorudzbine</td>
-		</tr>
-		</tbody>
+			<thead id="porudzbina">
+				<tr>
+					<th>Id stavke</th>
+					<th>Id jela</th>
+					<th>Naziv Jela</th>
+					<th>Kategorija Jela</th>
+					<th>Kolicina jela</th>
+					<th>Cena jela</th>
+					<th>Id porudzbine</th>
+				</tr>
+			</thead>
+			<tbody id="porudzbina1">
+				<tr ng-repeat="jelo in jela | filter:search:strict">
+					<td>{{jelo.idjela}}</td>
+					<td>{{jelo.nazivj}}</td>
+					<td>{{jelo.kategorijaj}}</td>
+					<td>{{jelo.kolicinaj}}</td>
+					<td>{{jelo.cenaj}}</td>
+					<td>idPorudzbine</td>
+				</tr>
+			</tbody>
 		</table>
-		
+
 		<div ng-if="!konobarServis.naplacen">
-			<button type="submit" id="iznos" value="iznos" ng-click="myfuncIznos()">Izracunaj iznos</button>
-			<label name="izn" value="svega:" id="izn" ng-bind="iznos" ></label>
+			<button type="submit" id="iznos" value="iznos"
+				ng-click="myfuncIznos()">Izracunaj iznos</button>
+			<label name="izn" value="svega:" id="izn" ng-bind="iznos"></label>
 		</div>
 		<div ng-if="konobarServis.naplacen">
-			<button type="submit" id="iznos" ng-click="konobarServis.naplati(idPorudzbine)">Naplati</button>
+			<button type="submit" id="iznos"
+				ng-click="konobarServis.naplati(idPorudzbine)">Naplati</button>
 		</div>
-	
+
 	</div>
-	<div class="naplatiR" ng-if="konobari && konobarServis.naplacen && !jeloServis.prikazanaP">
+	<div class="naplatiR"
+		ng-if="konobari && konobarServis.naplacen && !jeloServis.prikazanaP">
 		<table id="searchObjResults2">
-		<thead id="racun">
-		<tr>	
-			<th>Id Porudzbine</th>
-			<th>Datum Naplate</th>
-			<th>Iznos</th>
-			<th>Konobar</th>
-			<th>Prikazi stavke</th>
-			
-		</tr>
-		</thead>
-		<tbody id="porudzbina1">
-		<tr  ng-repeat="porudzbina in porudzbine | filter:search:strict">
-			<td>{{porudzbina.idporudzbine}}</td>
-			<td>{{porudzbina.datumnaplate}}</td>
-			<td>{{porudzbina.iznos}}</td>
-			<td>{{porudzbina.konobar.idkonobara}}</td>
-			<td><input type="radio" name="check1"></td>
-		</tr>
-		</tbody>
+			<thead id="racun">
+				<tr>
+					<th>Id Porudzbine</th>
+					<th>Datum Naplate</th>
+					<th>Iznos</th>
+					<th>Konobar</th>
+					<th>Prikazi stavke</th>
+
+				</tr>
+			</thead>
+			<tbody id="porudzbina1">
+				<tr ng-repeat="porudzbina in porudzbine | filter:search:strict">
+					<td>{{porudzbina.idporudzbine}}</td>
+					<td>{{porudzbina.datumnaplate}}</td>
+					<td>{{porudzbina.iznos}}</td>
+					<td>{{porudzbina.konobar.idkonobara}}</td>
+					<td><input type="radio" name="check1"></td>
+				</tr>
+			</tbody>
 		</table>
-		<button type="submit" id="prikaziS" value="prikaziS" ng-click="prikaziStavke()">Prikazi Stavke</button>
+		<button type="submit" id="prikaziS" value="prikaziS"
+			ng-click="prikaziStavke()">Prikazi Stavke</button>
 	</div>
 	<div class="UpisNJ" ng-if="jela && jeloServis.saveJ ">
-		<label>Unesite naziv jela:</label>
-		<input type="text" name="nazivj"><br> 
-		<label>Unesite kategoriju jela: (glavno jelo, salata, predjelo, desert, pice)</label>
-		<input type="text" name="kategorijaj"><br>
-		
-		<label>Unesite kolicinu jela u g:</label>
-		<input type="text" name="kolicinaj"><br>
-		<label>Unesite cenu jela u g:</label>
-		<input type="text" name="cenaj"><br>
-		
-		<button type="submit" id="potvrdi" value="potvrdi" ng-click="upisNJ()" style="margin-left: 120px;">Potvrdi</button>
-		
+		<label>Unesite naziv jela:</label> <input type="text" name="nazivj"><br>
+		<label>Unesite kategoriju jela: (glavno jelo, salata,
+			predjelo, desert, pice)</label> <input type="text" name="kategorijaj"><br>
+
+		<label>Unesite kolicinu jela u g:</label> <input type="text"
+			name="kolicinaj"><br> <label>Unesite cenu jela u
+			g:</label> <input type="text" name="cenaj"><br>
+
+		<button type="submit" id="potvrdi" value="potvrdi" ng-click="upisNJ()"
+			style="margin-left: 120px;">Potvrdi</button>
+
 	</div>
-		
-	
+
+
 	<div class="IzmenaJ" ng-if="jela && jeloServis.menjan">
 		<table id="searchObjResults5">
-		<tr>
-			<th>Id jela</th>
-			<th>Naziv Jela</th>
-			<th>Kategorija Jela</th>
-			<th>Kolicina jela</th>
-			<th>Cena jela</th>
-		</tr>
-		<tr ng-repeat="jelo in jela | filter:search:strict">
-			<td>{{jelo.idjela}}</td>
-			<td>{{jelo.nazivj}}</td>
-			<td>{{jelo.kategorijaj}}</td>
-			<td>{{jelo.kolicinaj}}</td>
-			<td>{{jelo.cenaj}}</td>
-		</tr>
-	</table>
-	
+			<tr>
+				<th>Id jela</th>
+				<th>Naziv Jela</th>
+				<th>Kategorija Jela</th>
+				<th>Kolicina jela</th>
+				<th>Cena jela</th>
+			</tr>
+			<tr ng-repeat="jelo in jela | filter:search:strict">
+				<td>{{jelo.idjela}}</td>
+				<td>{{jelo.nazivj}}</td>
+				<td>{{jelo.kategorijaj}}</td>
+				<td>{{jelo.kolicinaj}}</td>
+				<td>{{jelo.cenaj}}</td>
+			</tr>
+		</table>
+
 	</div>
 	<div class="MJela" ng-if="jela && jeloServis.menjan">
-		<label>Unesite id broj jela za kojeg se menjaju podaci:</label>
-		<input type="text" name="IdAz" value="" text-align="right"
-			; font-size="80%;" /><br> 
-		<label>Unesite novi naziv jela:</label>
-		<input type="text" name="NoviN" value="" ="right"; font-size="80%;" /><br>
-		<label>Unesite novu kategoriju jela:</label> <input type="text"
-			name="NovaK" value="" text-align="right" ; font-size="80%;" /><br>
-			<label>Unesite novu kolicinu jela:</label>
-		<input type="text" name="NovaKo" value="" ="right"; font-size="80%;" /><br>
-		<label>Unesite novu cenu jela:</label>
-		<input type="text" name="NovaC" value="" ="right"; font-size="80%;" /><br>
-		<button type="submit" id="sacuvaj" value="sacuvaj" ng-click="updateJ()">Sacuvaj</button>
+		<label>Unesite id broj jela za kojeg se menjaju podaci:</label> <input
+			type="text" name="IdAz" value="" text-align="right"
+			; font-size="80%;" /><br> <label>Unesite novi naziv
+			jela:</label> <input type="text" name="NoviN" value=""
+			="right"; font-size="80%;" /><br> <label>Unesite novu
+			kategoriju jela:</label> <input type="text" name="NovaK" value=""
+			text-align="right" ; font-size="80%;" /><br> <label>Unesite
+			novu kolicinu jela:</label> <input type="text" name="NovaKo" value=""
+			="right"; font-size="80%;" /><br> <label>Unesite novu
+			cenu jela:</label> <input type="text" name="NovaC" value=""
+			="right"; font-size="80%;" /><br>
+		<button type="submit" id="sacuvaj" value="sacuvaj"
+			ng-click="updateJ()">Sacuvaj</button>
 	</div>
 	<div class="AzuriranjeDM" ng-if="jeloServis.aDM">
-		<label>Unesite datum za koji zelite uvid u dnevni meni</label>
-		<input type="date"name="datum"placeholder="YYYY-MM-DD">
-		<button class="btn btn-outline-success my- my-sm" ng-click="findOneDM()" type="submit" name="dat">Prikazi dnevni meni</button> 
+		<label>Unesite datum za koji zelite uvid u dnevni meni</label> <input
+			type="date" name="datum" placeholder="YYYY-MM-DD">
+		<button class="btn btn-outline-success my- my-sm"
+			ng-click="findOneDM()" type="submit" name="dat">Prikazi
+			dnevni meni</button>
 		<table id="searchObjResults6">
-		<tr>
-			<th>Id Dnevnog Menia</th>
-			<th>Datum Dnevnog Menia</th>
-			
-		</tr>
-		<tr>
-			<td>{{dm.iddm}}</td>
-			<td>{{dm.datumdm}}</td>
-		</tr>
-		<button class="pJela" ng-click="findAll()" type="submit" name="dat2">Prikazi jela</button> 
-	</table>
-	<table id="searchObjResultsD">
-		<tr><th>Id dnevnog menia</th>	
-			<th>Id jela</th>
-			<th>Naziv Jela</th>
-			<th>Kategorija Jela</th>
-			<th>Kolicina jela</th>
-			<th>Cena jela</th>
-		</tr>
-		<tr  ng-repeat="jelo in jela | filter:search:strict">
-			<td>{{dnevnimeni.iddm}}</td>
-			<td>{{jelo.idjela}}</td>
-			<td>{{jelo.nazivj}}</td>
-			<td>{{jelo.kategorijaj}}</td>
-			<td>{{jelo.kolicinaj}}</td>
-			<td>{{jelo.cenaj}}</td>
-		</tr>
-	</table>
-	<button class="menjajDo" ng-click="updateDM()" type="submit" name="dat1">Azuriraj dnevni meni na danasnji datum</button>
+			<tr>
+				<th>Id Dnevnog Menia</th>
+				<th>Datum Dnevnog Menia</th>
+
+			</tr>
+			<tr>
+				<td>{{dm.iddm}}</td>
+				<td>{{dm.datumdm}}</td>
+			</tr>
+			<button class="pJela" ng-click="findAll()" type="submit" name="dat2">Prikazi
+				jela</button>
+		</table>
+		<table id="searchObjResultsD">
+			<tr>
+				<th>Id dnevnog menia</th>
+				<th>Id jela</th>
+				<th>Naziv Jela</th>
+				<th>Kategorija Jela</th>
+				<th>Kolicina jela</th>
+				<th>Cena jela</th>
+			</tr>
+			<tr ng-repeat="jelo in jela | filter:search:strict">
+				<td>{{dnevnimeni.iddm}}</td>
+				<td>{{jelo.idjela}}</td>
+				<td>{{jelo.nazivj}}</td>
+				<td>{{jelo.kategorijaj}}</td>
+				<td>{{jelo.kolicinaj}}</td>
+				<td>{{jelo.cenaj}}</td>
+			</tr>
+		</table>
+		<button class="menjajDo" ng-click="updateDM()" type="submit"
+			name="dat1">Azuriraj dnevni meni na danasnji datum</button>
 	</div>
 	<div class="KreirajDM" ng-if="jeloServis.cdm">
 		<label>Odaberite jela za dnevni meni:</label>
-		
+
 		<table id="searchObjResults30">
-		<thead id="createdm">
-		<tr>	
-			<th>Id jela</th>
-			<th>Naziv Jela</th>
-			<th>Kategorija Jela</th>
-			<th>Kolicina jela</th>
-			<th>Cena jela</th>
-			<th>Odaberi</th>
-		</tr>
-		</thead>
-		<tbody id="createdm1">
-		<tr  ng-repeat="jelo in jela | filter:search:strict">
-			<td>{{jelo.idjela}}</td>
-			<td>{{jelo.nazivj}}</td>
-			<td>{{jelo.kategorijaj}}</td>
-			<td>{{jelo.kolicinaj}}</td>
-			<td>{{jelo.cenaj}}</td>
-			<td><input type="checkbox" name="check2"></td>
-		</tr>
-		</tbody>
-	</table>
-		<button class="createDM" ng-click="setDM()" type="submit" name="dat10">Setovanje jela dnevnog menia</button>
+			<thead id="createdm">
+				<tr>
+					<th>Id jela</th>
+					<th>Naziv Jela</th>
+					<th>Kategorija Jela</th>
+					<th>Kolicina jela</th>
+					<th>Cena jela</th>
+					<th>Odaberi</th>
+				</tr>
+			</thead>
+			<tbody id="createdm1">
+				<tr ng-repeat="jelo in jela | filter:search:strict">
+					<td>{{jelo.idjela}}</td>
+					<td>{{jelo.nazivj}}</td>
+					<td>{{jelo.kategorijaj}}</td>
+					<td>{{jelo.kolicinaj}}</td>
+					<td>{{jelo.cenaj}}</td>
+					<td><input type="checkbox" name="check2"></td>
+				</tr>
+			</tbody>
+		</table>
+		<button class="createDM" ng-click="setDM()" type="submit" name="dat10">Setovanje
+			jela dnevnog menia</button>
 	</div>
 	<div class="BrisanjeJ" ng-if="jeloServis.obrisan">
 		<table id="searchObjResults">
-		<tr><th>Id dnevnog menia</th>	
-			<th>Id jela</th>
-			<th>Naziv Jela</th>
-			<th>Kategorija Jela</th>
-			<th>Kolicina jela</th>
-			<th>Cena jela</th>
-		</tr>
-		<tr  ng-repeat="jelo in jela | filter:search:strict">
-			<td>{{dnevnimeni.iddm}}</td>
-			<td>{{jelo.idjela}}</td>
-			<td>{{jelo.nazivj}}</td>
-			<td>{{jelo.kategorijaj}}</td>
-			<td>{{jelo.kolicinaj}}</td>
-			<td>{{jelo.cenaj}}</td>
-		</tr>
-	</table>
-	<label>Unesite id jela koje zelite da obrisete:</label>
-	<input type="text" name="bri">
-	<button class="brisi" ng-click="brisanjeJl()" type="submit" name="dat11">Obrisi</button>	
-	</div>	
-		
+			<tr>
+				<th>Id dnevnog menia</th>
+				<th>Id jela</th>
+				<th>Naziv Jela</th>
+				<th>Kategorija Jela</th>
+				<th>Kolicina jela</th>
+				<th>Cena jela</th>
+			</tr>
+			<tr ng-repeat="jelo in jela | filter:search:strict">
+				<td>{{dnevnimeni.iddm}}</td>
+				<td>{{jelo.idjela}}</td>
+				<td>{{jelo.nazivj}}</td>
+				<td>{{jelo.kategorijaj}}</td>
+				<td>{{jelo.kolicinaj}}</td>
+				<td>{{jelo.cenaj}}</td>
+			</tr>
+		</table>
+		<label>Unesite id jela koje zelite da obrisete:</label> <input
+			type="text" name="bri">
+		<button class="brisi" ng-click="brisanjeJl()" type="submit"
+			name="dat11">Obrisi</button>
+	</div>
+
 </body>
 </html>

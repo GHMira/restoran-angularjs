@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -29,7 +30,8 @@ public class Konobar implements Serializable {
 	private int idkonobara;
 
 	private String pass;
-
+	
+	@Column(name = "username", unique = true, nullable = false)
 	private String username;
 
 	//bi-directional many-to-one association to Porudzbina

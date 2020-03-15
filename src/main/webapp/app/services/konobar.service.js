@@ -3,10 +3,12 @@ angular.module('crudApp').factory('konobarServis',
 
 		$http = $injector.get('$http');
 		var ulogovan = false;
+		
 		var prikazanA= false;
 		var brisan=false;
 		var podKon=false;
 		var naplacen=false;
+		
 		
 		// $konobarService.ulogovan nije vidljiv na ovom mestu
 		// a mora da se promeni vrednost te promenljive u then delu programa (ako je rest poziv bio uspesan)
@@ -210,6 +212,7 @@ angular.module('crudApp').factory('konobarServis',
 			'naplati':naplati,
 			'getAllP': getAllP,
 			ulogovan: false,
+			
 			prikazanA: false,
 			brisan: false,
 			podKon: false,

@@ -9,6 +9,6 @@ import restoran.model.Konobar;
 public interface KonobarRepository extends JpaRepository<Konobar,Integer> {
 	Konobar findById(int idkonobara); 
 	List<Konobar> findByUsernameAndPass(String username, String password);
-
+	Konobar findByUsername(String username);
 
 }

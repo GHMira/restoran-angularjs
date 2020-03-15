@@ -12,7 +12,6 @@ function GeneralController($scope, jeloServis, konobarServis){
 	$scope.iznos = 0;
 	
 	
-	
 	console.log($scope.konobarServis.ulogovan);
 	
 	$scope.findJelo=function findJelo(){
@@ -238,15 +237,16 @@ function GeneralController($scope, jeloServis, konobarServis){
 	
 	
 	/**
-	 * Ako $scope.idPoruzbine ima neku vrednost onda se ova metoda koristi za prikazivanje
-	 * prethodno kreirane porudzbine (dugme sa strane u aplikaciji);
-	 * Ako je $scope.idPorudzbine undefined onda se ova metoda koristi za prikaz stavki porudzbine za naplatu 
-	 * */
+	 * Ako $scope.idPoruzbine ima neku vrednost onda se ova metoda koristi za
+	 * prikazivanje prethodno kreirane porudzbine (dugme sa strane u
+	 * aplikaciji); Ako je $scope.idPorudzbine undefined onda se ova metoda
+	 * koristi za prikaz stavki porudzbine za naplatu
+	 */
 	$scope.prikaziStavke=function prikaziStavke(){
 		$scope.jela= [];
 		if($scope.idPorudzbine){
 			$scope.jeloServis.prikaziP($scope.idPorudzbine).then(function(value){
-				//value.jelo
+				// value.jelo
 				for (var i = 0; i < value.length; i++){
 					$scope.jela.push(value[i].jelo);
 				}
@@ -270,7 +270,7 @@ function GeneralController($scope, jeloServis, konobarServis){
 				$scope.jela=[];
 				$scope.idPorudzbine = valueList[i].split(',')[0];
 				$scope.jeloServis.prikaziP($scope.idPorudzbine).then(function(value){
-					//value.jelo
+					// value.jelo
 					console.log(value);
 
 					for (var i = 0; i < value.length; i++){
@@ -326,7 +326,8 @@ function GeneralController($scope, jeloServis, konobarServis){
 		$scope.jeloServis.cdm=false;
 		$scope.jeloServis.obrisan=false;
 	}
-	$scope.registrovanje=function registrovanje(){
+	$scope.reg=function reg(){
+		
 		$scope.konobarServis.ulogovan = true;
 		$scope.jeloServis.porucen=false;
 		$scope.jeloServis.prikaziDnevniMeni=false;
@@ -334,6 +335,7 @@ function GeneralController($scope, jeloServis, konobarServis){
 		$scope.konobarServis.brisan=false;
 		$scope.konobarServis.prikazanA = false;
 		$scope.konobarServis.podKon = true;
+		
 		$scope.jeloServis.prikazanaP = false;
 		$scope.konobarServis.naplacen=false;
 		$scope.jeloServis.saveJ=false;
@@ -626,6 +628,7 @@ function GeneralController($scope, jeloServis, konobarServis){
 				$(".list-group-item").each(function(i) {
 					$(this).removeClass('disabled');
 				});
+				$scope.reg();
 			})
 			.catch(function(response) {
 				alert("Greska!");
@@ -637,15 +640,15 @@ function GeneralController($scope, jeloServis, konobarServis){
 	}
 	
 	$scope.upisNJ = function upisNJ() {
-		//var idjela = $('*[placeholder="idjela"]').val();
+		// var idjela = $('*[placeholder="idjela"]').val();
 		var nazivj = $('*[name="nazivj"]').val();
 		var kategorijaj = $('*[name="kategorijaj"]').val();
 		var cenaj = $('*[name="cenaj"]').val();
 		var kolicinaj = $('*[name="kolicinaj"]').val();
 
-		//if(nazivj && kategorijaj && cenaj && kolicinaj) {
+		// if(nazivj && kategorijaj && cenaj && kolicinaj) {
 			var data = {
-					//idjela:idjela,
+					// idjela:idjela,
 					kategorijaj:kategorijaj,
 					nazivj:nazivj,
 					cenaj:cenaj,
@@ -669,9 +672,9 @@ function GeneralController($scope, jeloServis, konobarServis){
 				alert("Greska!");
 			})
 			.finally();
-		//} else {
-			//alert("Unesite username i password!");
-		//}
+		// } else {
+			// alert("Unesite username i password!");
+		// }
 	}
 	
 // var promise1 = new Promise(function(resolve, reject) {
@@ -723,14 +726,12 @@ function GeneralController($scope, jeloServis, konobarServis){
 	 * restoran.$delete({idJela:jelo.idJela},function(){
 	 * $scope.jelo=jeloServis.query();
 	 * 
-	 * });
-	 *  }
+	 * }); }
 	 * 
 	 * $scope.buttonText="Submit"; $scope.konobar={ idkonobara:3,
-	 * username:'user3', pass:'pass3'
-	 *  } konobarServis.saveKonobar($scope.konobar);
-	 * konobarServis.getKonobari(); $scope.konobar={ idkonobara:2,
-	 * username:'user2', pass:'pass3' }
+	 * username:'user3', pass:'pass3' }
+	 * konobarServis.saveKonobar($scope.konobar); konobarServis.getKonobari();
+	 * $scope.konobar={ idkonobara:2, username:'user2', pass:'pass3' }
 	 * konobarServis.updateKonobar($scope.konobar);
 	 * konobarServis.deleteKonobar('1'); konobarServis.naplata('15');
 	 */
