@@ -10,6 +10,8 @@
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/services/jelo.service.js"></script>
 <script type="text/javascript" src="app/services/konobar.service.js"></script>
+<script type="text/javascript" src="app/directives/konobar.js"></script>
+<script type="text/javascript" src="app/directives/jelo.js"></script>
 <script type="text/javascript"
 	src="app/controllers/general.controller.js"></script>
 
@@ -33,100 +35,14 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="app/styles/style.css">
-</script>
+
 </head>
 </head>
 <body ng-app="crudApp" ng-controller="GeneralController">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand">RESTORAN</a>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
-			<ul class="navbar-nav" ng-if="konobarServis.ulogovan">
-				<li class="nav-item active"><a
-					class="nav-link list-group-item-action" href="#"
-					ng-click="brisanjeK()">Brisanje konobara <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item"><a class="nav-link list-group-item-action"
-					href="#" ng-click="prikaziAzuriranje()">Azuriranje konobara</a></li>
-				<li class="nav-item"><a class="nav-link list-group-item-action"
-					href="#" style="color: red; font-weight: 900px" ng-click="getP()">NAPLATA
-						RACUNA</a></li>
-			</ul>
-
-			<form class="form-inline my-2 my-lg-0"
-				ng-if="!konobarServis.ulogovan">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="username" aria-label="username"> <input
-					class="form-control mr-sm-2" type="password" placeholder="password"
-					aria-label="password">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit"
-					ng-click="prijava()">Prijavite se</button>
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit"
-					ng-click="registrovanje()">Registrujte se</button>
-			</form>
-		</div>
-
-
-	</nav>
-
-	<ul class="list-group ">
-
-
-
-		<li class="list-group-item list-group-item-primary"><a href="#"
-			class="list-group-item list-group-item-primary list-group-item-action"
-			ng-click="prikaziJela()"> Pronalazenje odredjenog jela</a></li>
-		<li class="list-group-item list-group-item-danger"><a href="#"
-			class="list-group-item list-group-item-danger list-group-item-action"
-			ng-click="saveJelo()">Unos novog jela u jelovnik</a></li>
-		<li class="list-group-item list-group-item-warning"><a href="#"
-			class="list-group-item list-group-item-warning list-group-item-action"
-			ng-click="menjanjeJ()">Izmena podataka o jelu</a></li>
-		<li class="list-group-item list-group-item-light"><a href="#"
-			class="list-group-item list-group-item-light list-group-item-action"
-			ng-click="brisanjeJ()">Brisanje jela iz jelovnika</a></li>
-		<li class="list-group-item list-group-item-secondary"><a href="#"
-			class="list-group-item list-group-item-secondary list-group-item-action"
-			ng-click="prikaziDnevniMeni()"> Pregled jela dnevnog menia </a></li>
-
-		<li class="list-group-item list-group-item-dark"><a href="#"
-			class="list-group-item list-group-item-dark list-group-item-action"
-			ng-click="porucivanje()"> Porucivanje jela </a></li>
-		<li class="list-group-item list-group-item-success"><a href="#"
-			class="list-group-item list-group-item-success list-group-item-action"
-			ng-click="prikaziStavke()">Prikaz kreirane porudzbine</a></li>
-
-		<li class="list-group-item list-group-item-info"><a href="#"
-			class="list-group-item list-group-item-info list-group-item-action"
-			ng-click="aDM()">Azuriranje dnevnog menia</a></li>
-		<li class="list-group-item list-group-item-light"><a href="#"
-			class="list-group-item list-group-item-light list-group-item-action"
-			ng-click="cDM()">Kreiranje novog dnevnog menia</a></li>
-
-
-	</ul>
-
-
-
-
-	<table class="table"
-		ng-if="konobari && konobarServis.podKon && konobarServis.ulogovan ">
-		<thead class="thead-dark">
-			<tr>
-				<th scope="col">ID</th>
-				<th scope="col">Username</th>
-				<th scope="col">Password</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="konobar in konobari">
-				<td>{{konobar.idkonobara}}</td>
-				<td>{{konobar.username}}</td>
-				<td>{{konobar.pass}}</td>
-			</tr>
-		</tbody>
-	</table>
+	
+	<konobar></konobar>
+	<jelo></jelo>
+	
 	<!-- 
 	<table class="tableJ"  ng-if="jela && jeloServis.prikaziJela">
 		<thead class="thead-dar">
@@ -150,8 +66,6 @@
 		</tbody>
 
 	</table>-->
-
-
 
 	<div class="konobar" ng-if="konobari && konobarServis.brisan ">
 		<label>Unesite id konobara kojeg zelite da brisete iz

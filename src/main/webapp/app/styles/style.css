@@ -1,6 +1,6 @@
 .list-group {
-	//max-width: 15.666667%;
-	position:fixed;s
+	max-width: 15.666667%;
+	position:fixed;
 }
 
 a:not([href]):not([tabindex]) {
