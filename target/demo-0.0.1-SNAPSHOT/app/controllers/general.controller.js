@@ -10,7 +10,7 @@ function GeneralController($scope, jeloServis, konobarServis){
 	$scope.konobarServis = konobarServis;
 	$scope.jeloServis = jeloServis;
 	$scope.iznos = 0;
-	
+	$scope.konobari = [];
 	
 	console.log($scope.konobarServis.ulogovan);
 	
@@ -107,6 +107,10 @@ function GeneralController($scope, jeloServis, konobarServis){
     		$scope.konobarServis.brisanjeK(idkonobara).then(function(value) {
     			
     		});
+        }
+        
+        $scope.logout = function (k) {
+    		$scope.konobarServis.logout();
         }
 
         /* Private Methods */
@@ -471,6 +475,25 @@ function GeneralController($scope, jeloServis, konobarServis){
 		$scope.jeloServis.cdm=false;
 		$scope.jeloServis.obrisan=false;
 	}
+	
+	$scope.logoutK=function logoutK(){
+		$scope.konobari = [];
+		$scope.jeloServis.porucen=false;
+		$scope.jeloServis.prikaziDnevniMeni=false;
+		$scope.jeloServis.prikaziJela=false;
+		$scope.konobarServis.brisan=false;
+		$scope.konobarServis.prikazanA = false;
+		$scope.konobarServis.podKon = false;
+		$scope.jeloServis.prikazanaP = false;
+		$scope.konobarServis.naplacen=false;
+		$scope.jeloServis.saveJ=false;
+		$scope.konobarServis.ulogovan = false;
+		$scope.jeloServis.menjan=false;
+		$scope.jeloServis.aDM=false;
+		$scope.jeloServis.cdm=false;
+		$scope.jeloServis.obrisan=false;
+		$scope.logout();
+	}
 	$scope.saveJelo=function saveJelo(){
 		$scope.jeloServis.prikazanaP = false;
 		$scope.konobarServis.ulogovan = true;
@@ -591,10 +614,15 @@ function GeneralController($scope, jeloServis, konobarServis){
 			$http(request)
 			.then(function(response){
 				$scope.konobarServis.ulogovan = true;
+				$scope.konobarServis.podKon = true;
 				$(".list-group-item").each(function(i) {
 					$(this).removeClass('disabled');
 				});
 				$scope.prijavljivanje();
+				
+				$scope.konobarServis.getKonobari().then(function(value) {
+					  $scope.konobari = value;
+				});
 			}).catch(function(){
 				alert("Pogresan username i password!");
 			})
@@ -681,10 +709,7 @@ function GeneralController($scope, jeloServis, konobarServis){
 // $scope.konobarServis.getKonobari();
 // });
 	
-	$scope.konobari = [];
-	$scope.konobarServis.getKonobari().then(function(value) {
-		  $scope.konobari = value;
-	});
+	
 	
 
 	// preuzimanje svih jela koja se nalaze u tabeli Jelo

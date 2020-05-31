@@ -202,6 +202,24 @@ angular.module('crudApp').factory('konobarServis',
 			
 		}
 		
+		function logout(){
+			console.log("Service: logout");
+	
+			var request = {
+					method: 'GET',
+					url: 'konobar/logout'
+			};
+			
+			$http(request)
+			.then(function(response){
+				console.log("Service: logout " + response.data);
+			})
+			.catch(function(response){
+				console.log("Error: logout " + response.data);
+			})
+			.finally();
+		}
+		
 		return  {
 			'logovanje':logovanje,
 			'saveKonobar' : saveKonobar,
@@ -211,6 +229,7 @@ angular.module('crudApp').factory('konobarServis',
 			'brisanjeK':brisanjeK,
 			'naplati':naplati,
 			'getAllP': getAllP,
+			'logout':logout,
 			ulogovan: false,
 			
 			prikazanA: false,

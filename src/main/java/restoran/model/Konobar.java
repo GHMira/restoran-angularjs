@@ -27,6 +27,7 @@ public class Konobar implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "idkonobara", unique = true, nullable = false)
 	private int idkonobara;
 
 	private String pass;

@@ -119,3 +119,602 @@
 2020-05-31 15:47:29.795  INFO 17224 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-05-31 15:47:29.796  INFO 17224 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-05-31 15:47:29.817  INFO 17224 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-05-31 16:13:48.426  INFO 9308 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 9308 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 16:13:48.433  INFO 9308 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 16:13:50.969  INFO 9308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 16:13:51.226  INFO 9308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 230ms. Found 5 repository interfaces.
+2020-05-31 16:13:52.301  INFO 9308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd3d44e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:13:53.668  INFO 9308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 16:13:53.806  INFO 9308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 16:13:53.808  INFO 9308 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 16:13:54.287  INFO 9308 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 16:13:54.288  INFO 9308 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5722 ms
+2020-05-31 16:13:54.671  INFO 9308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 16:13:55.521  INFO 9308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 16:13:55.682  INFO 9308 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 16:13:56.000  INFO 9308 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 16:13:56.054  INFO 9308 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 16:13:56.465  INFO 9308 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 16:13:56.833  INFO 9308 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 16:14:02.319  INFO 9308 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 16:14:02.444  INFO 9308 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 16:14:04.182  INFO 9308 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17063c32, org.springframework.security.web.context.SecurityContextPersistenceFilter@584fb03d, org.springframework.security.web.header.HeaderWriterFilter@61aa6300, org.springframework.security.web.csrf.CsrfFilter@448a6d00, org.springframework.security.web.authentication.logout.LogoutFilter@3c4e23be, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4271b748, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52d181ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25d9298e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79c2bc34, org.springframework.security.web.session.SessionManagementFilter@7f5f7731, org.springframework.security.web.access.ExceptionTranslationFilter@7aaf6bfd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4693d24f]
+2020-05-31 16:14:04.710  INFO 9308 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 16:14:04.868  WARN 9308 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 16:14:05.030  INFO 9308 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 16:14:05.668  INFO 9308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 16:14:05.673  INFO 9308 --- [main] restoran.CrudApp                         : Started CrudApp in 18.191 seconds (JVM running for 19.488)
+2020-05-31 16:14:09.520  INFO 9308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 16:14:09.522  INFO 9308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 16:14:09.541  INFO 9308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-05-31 17:21:06.646  INFO 17688 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 17688 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 17:21:06.652  INFO 17688 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 17:21:09.888  INFO 17688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 17:21:10.299  INFO 17688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 390ms. Found 5 repository interfaces.
+2020-05-31 17:21:11.181  INFO 17688 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3500071f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 17:21:11.991  INFO 17688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 17:21:12.064  INFO 17688 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 17:21:12.065  INFO 17688 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 17:21:12.444  INFO 17688 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 17:21:12.445  INFO 17688 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5682 ms
+2020-05-31 17:21:12.838  INFO 17688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 17:21:13.590  INFO 17688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 17:21:13.749  INFO 17688 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 17:21:14.017  INFO 17688 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 17:21:14.047  INFO 17688 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 17:21:14.596  INFO 17688 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 17:21:14.916  INFO 17688 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 17:21:21.403  INFO 17688 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 17:21:21.528  INFO 17688 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 17:21:24.185  INFO 17688 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cc87de4, org.springframework.security.web.context.SecurityContextPersistenceFilter@766db6f9, org.springframework.security.web.header.HeaderWriterFilter@2f2d8770, org.springframework.security.web.csrf.CsrfFilter@28d16af8, org.springframework.security.web.authentication.logout.LogoutFilter@563392e5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4b9d2cee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@728535c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a8bf1dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@706690e1, org.springframework.security.web.session.SessionManagementFilter@2ce62e27, org.springframework.security.web.access.ExceptionTranslationFilter@3c9c91e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@662d3e85]
+2020-05-31 17:21:24.697  INFO 17688 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 17:21:24.906  WARN 17688 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 17:21:25.037  INFO 17688 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 17:21:25.468 ERROR 17688 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:263) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:195) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at restoran.CrudApp.main(CrudApp.java:9) ~[classes/:na]
+Caused by: java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:479) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:468) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:220) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:88) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:230) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1124) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1210) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:585) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	... 14 common frames omitted
+
+2020-05-31 17:21:25.491  INFO 17688 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-05-31 17:21:25.514  INFO 17688 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-31 17:21:25.520 ERROR 17688 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2020-05-31 17:21:25.531  INFO 17688 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 17:21:25.536  INFO 17688 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 17:21:25.540  INFO 17688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-31 17:21:25.645  INFO 17688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-31 17:22:51.129  INFO 17648 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 17648 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 17:22:51.147  INFO 17648 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 17:22:53.984  INFO 17648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 17:22:54.179  INFO 17648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 180ms. Found 5 repository interfaces.
+2020-05-31 17:22:55.114  INFO 17648 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d530183b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 17:22:56.260  INFO 17648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 17:22:56.333  INFO 17648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 17:22:56.334  INFO 17648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 17:22:56.680  INFO 17648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 17:22:56.681  INFO 17648 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5360 ms
+2020-05-31 17:22:57.063  INFO 17648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 17:22:57.923  INFO 17648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 17:22:58.097  INFO 17648 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 17:22:58.675  INFO 17648 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 17:22:58.684  INFO 17648 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 17:22:59.292  INFO 17648 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 17:22:59.873  INFO 17648 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 17:23:05.023  INFO 17648 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 17:23:05.146  INFO 17648 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 17:23:07.723  INFO 17648 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75ef1392, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c06f19c, org.springframework.security.web.header.HeaderWriterFilter@5020b59f, org.springframework.security.web.csrf.CsrfFilter@575e862c, org.springframework.security.web.authentication.logout.LogoutFilter@49005dc4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@706690e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7aaf6bfd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c6a6ce3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4271b748, org.springframework.security.web.session.SessionManagementFilter@46d18a33, org.springframework.security.web.access.ExceptionTranslationFilter@19855799, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@237d0625]
+2020-05-31 17:23:08.262  INFO 17648 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 17:23:08.367  WARN 17648 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 17:23:08.490  INFO 17648 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 17:23:08.891  INFO 17648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 17:23:08.898  INFO 17648 --- [main] restoran.CrudApp                         : Started CrudApp in 19.093 seconds (JVM running for 19.922)
+2020-05-31 17:23:16.263  INFO 17648 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 17:23:16.265  INFO 17648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 17:23:16.292  INFO 17648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2020-05-31 17:23:51.344  WARN 17648 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-05-31 17:23:53.223  WARN 17648 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-05-31 17:25:52.122  INFO 10920 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 10920 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 17:25:52.141  INFO 10920 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 17:25:56.125  INFO 10920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 17:25:56.854  INFO 10920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 675ms. Found 5 repository interfaces.
+2020-05-31 17:26:53.601  INFO 10920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d946a62c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 17:26:55.076  INFO 10920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 17:26:55.202  INFO 10920 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 17:26:55.204  INFO 10920 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 17:26:55.788  INFO 10920 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 17:26:55.789  INFO 10920 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 63393 ms
+2020-05-31 17:26:56.276  INFO 10920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 17:26:58.122  INFO 10920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 17:26:58.470  INFO 10920 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 17:26:58.838  INFO 10920 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 17:26:58.858  INFO 10920 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 17:26:59.265  INFO 10920 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 17:26:59.690  INFO 10920 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 17:27:06.346  INFO 10920 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 17:27:06.507  INFO 10920 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 17:27:08.586  INFO 10920 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c167296, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c25385a, org.springframework.security.web.header.HeaderWriterFilter@1e5190bd, org.springframework.security.web.csrf.CsrfFilter@345d641e, org.springframework.security.web.authentication.logout.LogoutFilter@755a90a6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@544733a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44a0e68f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67683210, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@506e382b, org.springframework.security.web.session.SessionManagementFilter@5add7380, org.springframework.security.web.access.ExceptionTranslationFilter@49bc1f6c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d8112e6]
+2020-05-31 17:27:09.178  INFO 10920 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 17:27:09.486  WARN 10920 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 17:27:09.843  INFO 10920 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 17:27:10.982  INFO 10920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 17:27:11.019  INFO 10920 --- [main] restoran.CrudApp                         : Started CrudApp in 80.594 seconds (JVM running for 83.712)
+2020-05-31 17:27:16.004  INFO 10920 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 17:27:16.005  INFO 10920 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 17:27:16.026  INFO 10920 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-05-31 17:27:16.197  WARN 10920 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [120] milliseconds.
+2020-05-31 17:43:12.737  INFO 13556 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 13556 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 17:43:12.759  INFO 13556 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 17:43:16.091  INFO 13556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 17:43:16.624  INFO 13556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 488ms. Found 5 repository interfaces.
+2020-05-31 17:43:17.817  INFO 13556 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$20f63da8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 17:43:18.665  INFO 13556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 17:43:18.736  INFO 13556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 17:43:18.737  INFO 13556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 17:43:19.119  INFO 13556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 17:43:19.119  INFO 13556 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6241 ms
+2020-05-31 17:43:19.539  INFO 13556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 17:43:20.492  INFO 13556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 17:43:20.678  INFO 13556 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 17:43:20.997  INFO 13556 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 17:43:21.004  INFO 13556 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 17:43:21.510  INFO 13556 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 17:43:21.862  INFO 13556 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 17:43:28.855  INFO 13556 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 17:43:28.974  INFO 13556 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 17:43:31.782  INFO 13556 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4693d24f, org.springframework.security.web.context.SecurityContextPersistenceFilter@19855799, org.springframework.security.web.csrf.CsrfFilter@dddcd91, org.springframework.security.web.authentication.logout.LogoutFilter@2c6a6ce3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1a5a4f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5020b59f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a4f7c17, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@236a3e4, org.springframework.security.web.session.SessionManagementFilter@728535c6, org.springframework.security.web.access.ExceptionTranslationFilter@766db6f9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58690f5e]
+2020-05-31 17:43:32.193  INFO 13556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 17:43:32.292  WARN 13556 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 17:43:32.426  INFO 13556 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 17:43:32.861  INFO 13556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 17:43:32.865  INFO 13556 --- [main] restoran.CrudApp                         : Started CrudApp in 21.13 seconds (JVM running for 22.008)
+2020-05-31 17:44:43.880  INFO 13556 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 17:44:43.882  INFO 13556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 17:44:43.911  INFO 13556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
+2020-05-31 17:44:58.060  WARN 13556 --- [http-nio-8080-exec-10] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [127] milliseconds.
+2020-05-31 17:49:01.955  INFO 18252 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 18252 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 17:49:01.962  INFO 18252 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 17:49:04.999  INFO 18252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 17:49:05.358  INFO 18252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 339ms. Found 5 repository interfaces.
+2020-05-31 17:49:06.277  INFO 18252 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$82fbff92] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 17:49:07.117  INFO 18252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 17:49:07.189  INFO 18252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 17:49:07.191  INFO 18252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 17:49:07.574  INFO 18252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 17:49:07.575  INFO 18252 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5503 ms
+2020-05-31 17:49:07.956  INFO 18252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 17:49:08.702  INFO 18252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 17:49:08.863  INFO 18252 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 17:49:09.161  INFO 18252 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 17:49:09.180  INFO 18252 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 17:49:09.685  INFO 18252 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 17:49:10.017  INFO 18252 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 17:49:15.493  INFO 18252 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 17:49:15.701  INFO 18252 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 17:49:17.178  WARN 18252 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 17:49:17.511  INFO 18252 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 17:49:17.637  INFO 18252 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7167d81b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e5af973, org.springframework.web.filter.CorsFilter@7cadf3ca, org.springframework.security.web.authentication.logout.LogoutFilter@244f356, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2cd2c764, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1aee6983, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d28a235, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34fcc5e3, org.springframework.security.web.session.SessionManagementFilter@575e862c, org.springframework.security.web.access.ExceptionTranslationFilter@79e9c14, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47fc9ce]
+2020-05-31 17:49:18.246  INFO 18252 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 17:49:19.165  INFO 18252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 17:49:19.172  INFO 18252 --- [main] restoran.CrudApp                         : Started CrudApp in 18.187 seconds (JVM running for 19.024)
+2020-05-31 17:49:41.609  INFO 18252 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 17:49:41.614  INFO 18252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 17:49:41.635  INFO 18252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-05-31 17:50:05.344  WARN 18252 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2020-05-31 17:50:05.345 ERROR 18252 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry '1' for key 'konobar.PRIMARY'
+2020-05-31 17:50:05.346 ERROR 18252 --- [http-nio-8080-exec-4] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2020-05-31 17:58:40.853  INFO 17560 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 17560 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 17:58:40.860  INFO 17560 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 17:58:43.519  INFO 17560 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 17:58:43.873  INFO 17560 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 321ms. Found 5 repository interfaces.
+2020-05-31 17:58:45.370  INFO 17560 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d560be2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 17:58:46.335  INFO 17560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 17:58:46.408  INFO 17560 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 17:58:46.409  INFO 17560 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 17:58:46.782  INFO 17560 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 17:58:46.783  INFO 17560 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5824 ms
+2020-05-31 17:58:47.192  INFO 17560 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 17:58:47.959  INFO 17560 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 17:58:48.108  INFO 17560 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 17:58:48.475  INFO 17560 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 17:58:48.497  INFO 17560 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 17:58:48.949  INFO 17560 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 17:58:49.273  INFO 17560 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 17:58:56.091  INFO 17560 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 17:58:56.286  INFO 17560 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 17:58:58.738  INFO 17560 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cf1bbd3, org.springframework.security.web.context.SecurityContextPersistenceFilter@25d9298e, org.springframework.web.filter.CorsFilter@204a02a4, org.springframework.security.web.authentication.logout.LogoutFilter@12dc702b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f8da82, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@219db855, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@488b46da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4777f71e, org.springframework.security.web.session.SessionManagementFilter@49005dc4, org.springframework.security.web.access.ExceptionTranslationFilter@74faf450, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a2b3aff]
+2020-05-31 17:58:59.275  INFO 17560 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 17:58:59.396  WARN 17560 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 17:58:59.508  INFO 17560 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 17:58:59.953  INFO 17560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 17:58:59.957  INFO 17560 --- [main] restoran.CrudApp                         : Started CrudApp in 19.964 seconds (JVM running for 20.979)
+2020-05-31 17:59:29.721  INFO 17560 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 17:59:29.723  INFO 17560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 17:59:29.739  INFO 17560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-05-31 17:59:46.775  WARN 17560 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2020-05-31 17:59:46.775 ERROR 17560 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'idkonobara' doesn't have a default value
+2020-05-31 18:07:40.503  INFO 12992 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 12992 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 18:07:40.510  INFO 12992 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 18:07:43.548  INFO 12992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 18:07:43.895  INFO 12992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 325ms. Found 5 repository interfaces.
+2020-05-31 18:07:45.095  INFO 12992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ce92e330] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 18:07:46.074  INFO 12992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 18:07:46.147  INFO 12992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 18:07:46.148  INFO 12992 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 18:07:46.525  INFO 12992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 18:07:46.526  INFO 12992 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5882 ms
+2020-05-31 18:07:46.989  INFO 12992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 18:07:47.809  INFO 12992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 18:07:47.948  INFO 12992 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 18:07:48.229  INFO 12992 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 18:07:48.247  INFO 12992 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 18:07:48.782  INFO 12992 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 18:07:49.275  INFO 12992 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 18:07:54.937  INFO 12992 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 18:07:55.075  INFO 12992 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 18:07:57.444  INFO 12992 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f8da82, org.springframework.security.web.context.SecurityContextPersistenceFilter@726a5e6a, org.springframework.web.filter.CorsFilter@6987b74e, org.springframework.security.web.authentication.logout.LogoutFilter@3b3190fd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f2a1ff0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b889cb6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3702d0ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22e95960, org.springframework.security.web.session.SessionManagementFilter@66046e7c, org.springframework.security.web.access.ExceptionTranslationFilter@52d181ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@54b96813]
+2020-05-31 18:07:58.047  INFO 12992 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 18:07:58.205  WARN 12992 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 18:07:58.412  INFO 12992 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 18:07:58.998  INFO 12992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 18:07:59.002  INFO 12992 --- [main] restoran.CrudApp                         : Started CrudApp in 19.492 seconds (JVM running for 20.52)
+2020-05-31 18:08:14.188  INFO 12992 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 18:08:14.189  INFO 12992 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 18:08:14.213  INFO 12992 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2020-05-31 18:08:25.773  WARN 12992 --- [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2020-05-31 18:08:25.774 ERROR 12992 --- [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry '2' for key 'konobar.PRIMARY'
+2020-05-31 18:08:25.775 ERROR 12992 --- [http-nio-8080-exec-9] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2020-05-31 18:09:07.858  WARN 12992 --- [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2020-05-31 18:09:07.858 ERROR 12992 --- [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry '3' for key 'konobar.PRIMARY'
+2020-05-31 18:09:07.859 ERROR 12992 --- [http-nio-8080-exec-3] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2020-05-31 18:09:17.672  WARN 12992 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2020-05-31 18:09:17.672 ERROR 12992 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry '4' for key 'konobar.PRIMARY'
+2020-05-31 18:09:17.673 ERROR 12992 --- [http-nio-8080-exec-5] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2020-05-31 18:43:54.793  INFO 15868 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 15868 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 18:43:54.800  INFO 15868 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 18:43:57.443  INFO 15868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 18:43:57.650  INFO 15868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 191ms. Found 5 repository interfaces.
+2020-05-31 18:43:58.653  INFO 15868 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2020-05-31 18:43:58.867  INFO 15868 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2020-05-31 18:43:58.869  INFO 15868 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 18:43:58.871  INFO 15868 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 18:43:58.873  INFO 15868 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 18:43:58.875  INFO 15868 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 18:43:58.875  INFO 15868 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 18:43:58.876  INFO 15868 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 18:43:59.386  INFO 15868 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$19704d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 18:43:59.681  INFO 15868 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2020-05-31 18:43:59.687  INFO 15868 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2020-05-31 18:44:00.707  INFO 15868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 18:44:00.857  INFO 15868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 18:44:00.858  INFO 15868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 18:44:01.240  INFO 15868 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 18:44:01.241  INFO 15868 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6310 ms
+2020-05-31 18:44:01.635  INFO 15868 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 18:44:02.335  INFO 15868 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 18:44:02.557  INFO 15868 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 18:44:02.854  INFO 15868 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 18:44:02.864  INFO 15868 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 18:44:03.338  INFO 15868 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 18:44:03.701  INFO 15868 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 18:44:09.681  INFO 15868 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 18:44:09.804  INFO 15868 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 18:44:11.557  INFO 15868 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d515e2c, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c108c05, org.springframework.web.filter.CorsFilter@53b8a0f7, org.springframework.security.web.authentication.logout.LogoutFilter@478cebdb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1361e880, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d0333c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@638d624a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d3a7f83, org.springframework.security.web.session.SessionManagementFilter@3adbd038, org.springframework.security.web.access.ExceptionTranslationFilter@2a191f83, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@73818435]
+2020-05-31 18:44:12.243  INFO 15868 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 18:44:12.477  WARN 15868 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 18:44:12.703  INFO 15868 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 18:44:13.624  INFO 15868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 18:44:13.627  INFO 15868 --- [main] restoran.CrudApp                         : Started CrudApp in 19.894 seconds (JVM running for 20.985)
+2020-05-31 18:44:20.907  INFO 15868 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 18:44:20.909  INFO 15868 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 18:44:20.930  INFO 15868 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-05-31 18:50:06.278  INFO 14928 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 14928 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 18:50:06.285  INFO 14928 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 18:50:08.484  INFO 14928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 18:50:08.690  INFO 14928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 190ms. Found 5 repository interfaces.
+2020-05-31 18:50:09.402  INFO 14928 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2020-05-31 18:50:09.541  INFO 14928 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2020-05-31 18:50:09.542  INFO 14928 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 18:50:09.543  INFO 14928 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 18:50:09.544  INFO 14928 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 18:50:09.544  INFO 14928 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 18:50:09.545  INFO 14928 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 18:50:09.545  INFO 14928 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 18:50:09.813  INFO 14928 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af86569e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 18:50:10.031  INFO 14928 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2020-05-31 18:50:10.038  INFO 14928 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2020-05-31 18:50:11.063  INFO 14928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 18:50:11.234  INFO 14928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 18:50:11.262  INFO 14928 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 18:50:12.053  INFO 14928 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 18:50:12.054  INFO 14928 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5656 ms
+2020-05-31 18:50:13.098  INFO 14928 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 18:50:14.044  INFO 14928 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 18:50:14.229  INFO 14928 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 18:50:14.638  INFO 14928 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 18:50:14.648  INFO 14928 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 18:50:15.014  INFO 14928 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 18:50:15.367  INFO 14928 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 18:50:20.476  INFO 14928 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 18:50:20.612  INFO 14928 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 18:50:22.073  INFO 14928 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2fe38b73, org.springframework.security.web.context.SecurityContextPersistenceFilter@49222187, org.springframework.web.filter.CorsFilter@511a307e, org.springframework.security.web.authentication.logout.LogoutFilter@7272914b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7eea934d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2665a2e7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15c3849f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7aef8000, org.springframework.security.web.session.SessionManagementFilter@58041b11, org.springframework.security.web.access.ExceptionTranslationFilter@6fbfd28b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1fc4483f]
+2020-05-31 18:50:22.540  INFO 14928 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 18:50:22.647  WARN 14928 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 18:50:22.765  INFO 14928 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 18:50:23.475  INFO 14928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 18:50:23.479  INFO 14928 --- [main] restoran.CrudApp                         : Started CrudApp in 18.461 seconds (JVM running for 19.954)
+2020-05-31 18:51:35.568  INFO 14928 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 18:51:35.570  INFO 14928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 18:51:35.601  INFO 14928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2020-05-31 18:59:09.971  INFO 18148 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 18148 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 18:59:09.977  INFO 18148 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 18:59:12.341  INFO 18148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 18:59:12.760  INFO 18148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 390ms. Found 5 repository interfaces.
+2020-05-31 18:59:13.857  INFO 18148 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2020-05-31 18:59:14.047  INFO 18148 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2020-05-31 18:59:14.048  INFO 18148 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 18:59:14.049  INFO 18148 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 18:59:14.050  INFO 18148 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 18:59:14.051  INFO 18148 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 18:59:14.051  INFO 18148 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 18:59:14.052  INFO 18148 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 18:59:14.371  INFO 18148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$205826cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 18:59:14.610  INFO 18148 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2020-05-31 18:59:14.616  INFO 18148 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2020-05-31 18:59:15.355  INFO 18148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 18:59:15.427  INFO 18148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 18:59:15.428  INFO 18148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 18:59:15.787  INFO 18148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 18:59:15.788  INFO 18148 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5692 ms
+2020-05-31 18:59:16.175  INFO 18148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 18:59:16.969  INFO 18148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 18:59:17.154  INFO 18148 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 18:59:17.474  INFO 18148 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 18:59:17.478  INFO 18148 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 18:59:17.913  INFO 18148 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 18:59:18.237  INFO 18148 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 18:59:23.934  INFO 18148 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 18:59:24.051  INFO 18148 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 18:59:25.682  INFO 18148 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@790d629a, org.springframework.security.web.context.SecurityContextPersistenceFilter@642f8b7f, org.springframework.web.filter.CorsFilter@346e5cc, org.springframework.security.web.authentication.logout.LogoutFilter@c02a1be, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@25e203e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7272914b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b86a656, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cd2c764, org.springframework.security.web.session.SessionManagementFilter@5b634e24, org.springframework.security.web.access.ExceptionTranslationFilter@2627335c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25a2f432]
+2020-05-31 18:59:26.273  INFO 18148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 18:59:26.524  WARN 18148 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 18:59:26.747  INFO 18148 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 18:59:27.609  INFO 18148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 18:59:27.619  INFO 18148 --- [main] restoran.CrudApp                         : Started CrudApp in 18.607 seconds (JVM running for 19.639)
+2020-05-31 19:00:19.846  INFO 18148 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 19:00:19.847  INFO 18148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 19:00:19.863  INFO 18148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-05-31 19:00:45.162 ERROR 18148 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class restoran.model.Konobar cannot be cast to class java.util.List (restoran.model.Konobar is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')] with root cause
+
+java.lang.ClassCastException: class restoran.model.Konobar cannot be cast to class java.util.List (restoran.model.Konobar is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')
+	at restoran.service.KonobarService.login(KonobarService.java:38) ~[classes/:na]
+	at restoran.rest.KonobarResource.login(KonobarResource.java:60) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2020-05-31 19:05:03.058  INFO 17128 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 17128 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 19:05:03.070  INFO 17128 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 19:05:05.312  INFO 17128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 19:05:05.554  INFO 17128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 223ms. Found 5 repository interfaces.
+2020-05-31 19:05:06.196  INFO 17128 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2020-05-31 19:05:06.318  INFO 17128 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2020-05-31 19:05:06.319  INFO 17128 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 19:05:06.319  INFO 17128 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 19:05:06.320  INFO 17128 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 19:05:06.320  INFO 17128 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 19:05:06.320  INFO 17128 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 19:05:06.321  INFO 17128 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 19:05:06.562  INFO 17128 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$205826cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 19:05:06.771  INFO 17128 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2020-05-31 19:05:06.775  INFO 17128 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2020-05-31 19:05:08.387  INFO 17128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 19:05:08.501  INFO 17128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 19:05:08.502  INFO 17128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 19:05:09.235  INFO 17128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 19:05:09.237  INFO 17128 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6075 ms
+2020-05-31 19:05:10.455  INFO 17128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 19:05:11.307  INFO 17128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 19:05:11.488  INFO 17128 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 19:05:11.806  INFO 17128 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 19:05:11.831  INFO 17128 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 19:05:12.339  INFO 17128 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 19:05:12.665  INFO 17128 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 19:05:16.775  INFO 17128 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 19:05:16.925  INFO 17128 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 19:05:18.408  INFO 17128 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f1c7fde, org.springframework.security.web.context.SecurityContextPersistenceFilter@7272914b, org.springframework.web.filter.CorsFilter@2b409174, org.springframework.security.web.authentication.logout.LogoutFilter@62732be7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@47fc9ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e532f2d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4797023d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11939a9f, org.springframework.security.web.session.SessionManagementFilter@642f8b7f, org.springframework.security.web.access.ExceptionTranslationFilter@5b634e24, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f7c4e0]
+2020-05-31 19:05:18.785  INFO 17128 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 19:05:18.896  WARN 17128 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 19:05:19.019  INFO 17128 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 19:05:19.479  INFO 17128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 19:05:19.484  INFO 17128 --- [main] restoran.CrudApp                         : Started CrudApp in 17.339 seconds (JVM running for 19.06)
+2020-05-31 19:05:24.948  INFO 17128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 19:05:24.949  INFO 17128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 19:05:24.967  INFO 17128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-05-31 19:11:55.846  INFO 18124 --- [main] restoran.CrudApp                         : Starting CrudApp on DESKTOP-CL3PUBV with PID 18124 (E:\eclipse\restoran-angularjs\target\classes started by User in E:\eclipse\restoran-angularjs)
+2020-05-31 19:11:55.852  INFO 18124 --- [main] restoran.CrudApp                         : No active profile set, falling back to default profiles: default
+2020-05-31 19:11:58.555  INFO 18124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-31 19:11:58.945  INFO 18124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 369ms. Found 5 repository interfaces.
+2020-05-31 19:11:59.836  INFO 18124 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2020-05-31 19:11:59.971  INFO 18124 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2020-05-31 19:11:59.972  INFO 18124 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 19:11:59.973  INFO 18124 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 19:11:59.974  INFO 18124 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 19:11:59.975  INFO 18124 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 19:11:59.975  INFO 18124 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2020-05-31 19:11:59.976  INFO 18124 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-05-31 19:12:00.285  INFO 18124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$67de47e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 19:12:00.522  INFO 18124 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2020-05-31 19:12:00.527  INFO 18124 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2020-05-31 19:12:01.238  INFO 18124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 19:12:01.309  INFO 18124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 19:12:01.310  INFO 18124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-31 19:12:01.833  INFO 18124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 19:12:01.834  INFO 18124 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5854 ms
+2020-05-31 19:12:02.426  INFO 18124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 19:12:03.190  INFO 18124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 19:12:03.356  INFO 18124 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-31 19:12:03.721  INFO 18124 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-31 19:12:03.729  INFO 18124 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-31 19:12:04.123  INFO 18124 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-31 19:12:04.581  INFO 18124 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-31 19:12:09.964  INFO 18124 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-31 19:12:10.087  INFO 18124 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-31 19:12:11.654  INFO 18124 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29d29657, org.springframework.security.web.context.SecurityContextPersistenceFilter@c02a1be, org.springframework.web.filter.CorsFilter@e0d9e3f, org.springframework.security.web.authentication.logout.LogoutFilter@296a71df, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7dbd70fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62732be7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@630febd7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@516155b5, org.springframework.security.web.session.SessionManagementFilter@642d34f1, org.springframework.security.web.access.ExceptionTranslationFilter@5002be8e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cadf3ca]
+2020-05-31 19:12:12.418  INFO 18124 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 19:12:12.637  WARN 18124 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-31 19:12:12.868  INFO 18124 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2020-05-31 19:12:13.824  INFO 18124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 19:12:13.829  INFO 18124 --- [main] restoran.CrudApp                         : Started CrudApp in 18.988 seconds (JVM running for 19.85)
+2020-05-31 19:12:27.168  INFO 18124 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 19:12:27.169  INFO 18124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 19:12:27.185  INFO 18124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms

@@ -2,11 +2,18 @@ package restoran.rest;
 import java.net.URISyntaxException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +32,9 @@ public class KonobarResource {
 	
 	@Autowired
 	private KonobarService konobarService;
+	
+	 @Autowired
+	    PasswordEncoder passwordEncoder;
 	
 //	@Configuration
 //	@Order(SecurityProperties.BASIC_AUTH_ORDER)
@@ -58,6 +68,8 @@ public class KonobarResource {
 	@RequestMapping(value="ksave", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Konobar> createKonobar(@RequestBody Konobar konobar)throws URISyntaxException{
 		try {
+	        String encodedPassword  = passwordEncoder.encode(konobar.getPass());
+	        konobar.setPass(encodedPassword);
 			Konobar result=konobarService.save(konobar);
 			if(result != null) {
 				return new ResponseEntity<Konobar>(HttpStatus.OK);
@@ -129,6 +141,15 @@ public class KonobarResource {
 		konobarService.naplataRa(idPorudzbine);
 		return ResponseEntity.ok().build();
 		
+	}
+	
+	@RequestMapping(value="/logout", method = RequestMethod.GET)
+	public  ResponseEntity logoutPage (HttpServletRequest request, HttpServletResponse response) {
+	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    if (auth != null){    
+	        new SecurityContextLogoutHandler().logout(request, response, auth);
+	    }
+	    return ResponseEntity.ok().build();
 	}
 	
 }

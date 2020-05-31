@@ -9,6 +9,7 @@ import java.util.List;
 import javax.persistence.EntityExistsException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import restoran.model.Jelo;
@@ -26,15 +27,19 @@ public class KonobarService {
 	private PorudzbinaRepository porudzbinaRepository;
 	@Autowired
 	private StavkaPorudzbineRepository stavkaPorudzbineRepository;
-
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
 	@Autowired
 	public KonobarService() {
 	}
 
 	public Konobar login(String username, String password) {
-		List<Konobar> res = konobarRepository.findByUsernameAndPass(username, password);
-		if (res != null && !res.isEmpty() && res.get(0) != null) {
-			return res.get(0);
+		Konobar res = konobarRepository.findByUsername(username);
+		if (res != null ) {
+				if(passwordEncoder.matches(password, res.getPass())) {
+					return res;
+				}
 		}
 		return null;
 	}
